@@ -23,7 +23,7 @@ When two resumes show the same job-relevant evidence, do keyword, embedding and 
 
 **Hiding names fixed the name problem only.** When names and emails were hidden before scoring, the name effect disappeared and the method got better at ranking stronger candidates above weaker ones (83% of the time before, 90% after). A career break still moved scores by 1.5 points on average, and changing the section order by 1.9.
 
-**Keyword counting never moved, but it can be fooled.** Keyword counting gave the same score to both versions in every pair. It ranked stronger candidates above weaker ones 96% of the time, against 83% for meaning-matching. Its word lists and the intended strong-to-weak order were written by the same person, which helps it. It still made mistakes. With keyword counting, MA-R08 (a weak candidate for job MA-02) scored 10.0 points higher than MA-R01 (a borderline candidate for job MA-02), so the weaker candidate was ranked above the stronger one. It gave the weaker candidate credit for CRM and campaign platforms because of the line "Visit about 15 customers a week and record orders in the company CRM".
+**Keyword counting never moved, but it can be fooled.** Keyword counting gave the same score to both versions in every pair. It ranked stronger candidates above weaker ones 96% of the time, against 83% for meaning-matching. Its word lists and the intended strong-to-weak order were written by the same person, which helps it. It still made mistakes: it once ranked a weaker candidate above a stronger one because of a single matching word (case F27 on the Mistakes page).
 
 ## 1. How much does one changed field move the score?
 

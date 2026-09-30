@@ -86,8 +86,9 @@ def headline_findings(relevance: list[dict], gaps: list[dict], alpha: float, mat
                 f"{emb['tier_accuracy']:.0%} for meaning-matching. Its word lists and the intended strong-to-weak order "
                 f"were written by the same person, which helps it.")
         inversion = next((c for c in (cases or []) if c["kind"] == "tier_inversion" and c["method"] == "keyword"), None)
-        if inversion and "explanation" in inversion:
-            text += f" It still made mistakes. {inversion['explanation']}"
+        if inversion:
+            text += (f" It still made mistakes: it once ranked a weaker candidate above a stronger one because of a "
+                     f"single matching word (case {inversion['case_id']} on the Mistakes page).")
         out.append({"title": "Keyword counting never moved, but it can be fooled" if best is kw and invariant
                     else "Keyword counting had its own problems", "text": text})
     return out
