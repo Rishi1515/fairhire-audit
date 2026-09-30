@@ -1,0 +1,7 @@
+Test Candidate
+test.candidate@example.com | +65 9000 0000 | Singapore
+
+EXPERIENCE
+Analyst, Fixture Company | Singapore | Jan 2022 - Present
+- Wrote SQL queries joining orders and customers tables for weekly reports.
+- Built a Tableau dashboard used by 10 store managers.

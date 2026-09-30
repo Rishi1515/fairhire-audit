@@ -1,0 +1,53 @@
+resume_id: SE-R07
+family: software_engineer
+intended_tier:
+  SE-01: good
+  SE-02: weak
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for SE-01: Android engineer who also built two Kotlin Spring Boot services with REST APIs, MySQL tables,
+  JUnit tests and a CI pipeline. Weak for SE-02: mobile only, no web frontend. Studied at a university outside both institution
+  test sets.'
+summary: Mobile engineer with five years of experience building Android apps and the backend services behind them.
+experience:
+- employer: Geylang Eats
+  title: Mobile Engineer
+  location: Singapore
+  start: 2023-02
+  end: null
+  bullets:
+  - Build Android app features in Kotlin for about 200,000 monthly users.
+  - Built two backend services in Kotlin with Spring Boot that provide REST APIs for order tracking.
+  - Designed MySQL tables for order status history.
+  - Write unit tests with JUnit and set up the app's GitHub Actions build pipeline.
+- employer: Yishun Games Studio
+  title: Android Developer
+  location: Singapore
+  start: 2021-08
+  end: 2023-01
+  bullets:
+  - Built Android game menus and in-app purchase screens in Kotlin.
+  - Fixed crashes found through Firebase Crashlytics reports.
+education:
+- institution: Singapore University of Technology and Design
+  qualification: Bachelor of Engineering
+  subject: Computer Science and Design
+  start: 2017-09
+  end: 2021-08
+  grade: GPA 3.8 / 5.0
+  coursework:
+  - Software Construction
+  - Mobile Application Development
+skills:
+  Languages:
+  - Kotlin
+  - Java
+  - SQL
+  Frameworks:
+  - Android
+  - Spring Boot
+  Tools:
+  - MySQL
+  - JUnit
+  - GitHub Actions
+  - Firebase

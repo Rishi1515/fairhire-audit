@@ -1,0 +1,26 @@
+job_id: SE-02
+family: software_engineer
+title: Frontend Engineer
+employer: Bukit Learn
+location: Singapore (hybrid)
+version: "0.1-draft"
+summary: >
+  Bukit Learn builds an online learning platform used by secondary school students and teachers. The web team
+  builds the student and teacher interfaces, which must work well on low-cost laptops and phones and be usable
+  by students with disabilities.
+responsibilities:
+  - Build and maintain user interfaces in React and TypeScript.
+  - Make pages accessible and responsive, following WCAG 2.1 AA guidelines.
+  - Write component and end-to-end tests.
+  - Integrate with REST and GraphQL APIs provided by the backend team.
+  - Measure and improve page load speed on slower devices and networks.
+  - Work closely with designers using Figma and the team's design system.
+requirements:
+  - At least 2 years of professional frontend development experience.
+  - Strong JavaScript and TypeScript skills.
+  - Production experience with React.
+  - Practical knowledge of web accessibility and responsive layouts.
+  - Experience writing automated frontend tests.
+nice_to_have:
+  - Experience improving web performance metrics such as Core Web Vitals.
+  - Experience in education technology.

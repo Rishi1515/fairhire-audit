@@ -1,0 +1,137 @@
+rubric_id: RUB-SE-01
+job_id: SE-01
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: backend_language
+  name: Backend programming language
+  importance: essential
+  weight: 0.2
+  aliases:
+  - Python
+  - Java
+  - Go
+  - Golang
+  - Kotlin
+  - C#
+  observable_evidence:
+  - Built production features or services in a backend language.
+  - Owned a service or module.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: api_design
+  name: API design and development
+  importance: essential
+  weight: 0.2
+  aliases:
+  - REST
+  - REST API
+  - gRPC
+  - API
+  - FastAPI
+  - Django
+  - Flask
+  - Spring Boot
+  observable_evidence:
+  - Designed or built APIs used by other teams or customers.
+  - Handled versioning, validation or errors in an API.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: relational_databases
+  name: Relational databases
+  importance: essential
+  weight: 0.15
+  aliases:
+  - PostgreSQL
+  - MySQL
+  - SQL
+  - schema design
+  - indexing
+  - database migration
+  observable_evidence:
+  - Designed schemas or wrote migrations.
+  - Improved query performance with indexes or query changes.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: automated_testing
+  name: Automated testing
+  importance: essential
+  weight: 0.15
+  aliases:
+  - unit test
+  - integration test
+  - pytest
+  - JUnit
+  - TDD
+  - test coverage
+  observable_evidence:
+  - Wrote unit or integration tests for their own code.
+  - Improved test reliability or coverage.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: cloud_deployment
+  name: Containers, cloud and CI/CD
+  importance: desirable
+  weight: 0.15
+  aliases:
+  - Docker
+  - Kubernetes
+  - AWS
+  - GCP
+  - Azure
+  - CI/CD
+  - GitHub Actions
+  - Jenkins
+  observable_evidence:
+  - Deployed services using containers or a CI/CD pipeline.
+  - Worked with cloud infrastructure.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: production_debugging
+  name: Production support and debugging
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - monitoring
+  - on-call
+  - incident
+  - logging
+  - Grafana
+  - Prometheus
+  - Datadog
+  observable_evidence:
+  - Investigated and fixed production issues.
+  - Took part in on-call or incident reviews.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: collaboration
+  name: Code review and collaboration
+  importance: desirable
+  weight: 0.05
+  aliases:
+  - code review
+  - design document
+  - mentored
+  - pair programming
+  observable_evidence:
+  - Reviewed others' code, wrote design documents or mentored engineers.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+  - Generic claims such as 'team player' with no example.
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

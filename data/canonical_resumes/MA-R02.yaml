@@ -1,0 +1,49 @@
+resume_id: MA-R02
+family: marketing_analyst
+intended_tier:
+  MA-01: strong
+  MA-02: good
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for MA-01: leads paid search and social with large spend, incrementality tests and CAC targets. Good
+  for MA-02: builds segments and cohort retention analysis and has used HubSpot, but no surveys and CRM is not the main job.
+  Studied at a less internationally ranked university.'
+summary: Growth marketing lead with six years of experience in paid acquisition and customer analytics for consumer brands.
+experience:
+- employer: Upper Thomson Meals
+  title: Growth Marketing Lead
+  location: Singapore
+  start: 2022-09
+  end: null
+  bullets:
+  - Lead paid search and paid social for a meal delivery brand with SGD 1.2 million annual media spend.
+  - Run incrementality tests with holdout regions to measure the true effect of Meta and Google campaigns.
+  - Built customer segments by order frequency and value in SQL, used to set different CAC targets for new and returning customers.
+  - Analysed cohort retention of customers from each channel and shifted budget toward channels with higher 90-day retention.
+  - Present quarterly growth reviews to the founders.
+- employer: Paya Lebar Fitness
+  title: Marketing Analyst
+  location: Singapore
+  start: 2020-05
+  end: 2022-08
+  bullets:
+  - Reported Google Ads and Facebook Ads performance in Tableau.
+  - Ran email campaigns in HubSpot to bring back lapsed members.
+  - Used Excel and SQL to track cost per acquisition by channel.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Business
+  subject: Marketing
+  start: 2016-07
+  end: 2020-04
+  grade: GPA 3.8 / 5.0
+skills:
+  Platforms:
+  - Google Ads
+  - Meta Ads
+  - GA4
+  - HubSpot
+  Data:
+  - SQL
+  - Excel
+  - Tableau

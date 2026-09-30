@@ -1,0 +1,54 @@
+resume_id: MA-R03
+family: marketing_analyst
+intended_tier:
+  MA-01: good
+  MA-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for MA-02: RFM segments at scale, cohort churn analysis with a measured win-back result, Braze campaigns
+  with holdouts, a survey and regular insight reports. Good for MA-01: some Meta retargeting and holdout testing but little
+  paid media depth.'
+summary: CRM analyst with almost six years of experience in retail loyalty and email marketing.
+experience:
+- employer: Eunos Fresh Mart
+  title: CRM Analyst
+  location: Singapore
+  start: 2022-10
+  end: null
+  bullets:
+  - Built RFM segments for 450,000 loyalty members in SQL and used them to target weekly offers.
+  - Analyse monthly cohort retention and churn; a win-back programme for lapsed members recovered about 8% of them within
+    three months.
+  - Plan and measure email and app push campaigns in Braze, including holdout groups.
+  - Ran retargeting campaigns on Meta Ads for lapsed members and reported cost per reactivation.
+  - Present monthly customer insight reports to the marketing and category teams.
+- employer: Changi Beauty House
+  title: Marketing Executive
+  location: Singapore
+  start: 2021-01
+  end: 2022-09
+  bullets:
+  - Sent weekly email campaigns in Klaviyo and reported open and click rates.
+  - Ran a customer satisfaction survey and summarised the results in Excel.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Business Administration
+  subject: Marketing
+  start: 2016-08
+  end: 2020-06
+  grade: GPA 3.9 / 5.0
+  coursework:
+  - Marketing Analytics
+  - Customer Relationship Management
+skills:
+  Platforms:
+  - Braze
+  - Klaviyo
+  - Meta Ads
+  Data:
+  - SQL
+  - Excel
+  - Tableau
+  Methods:
+  - RFM segmentation
+  - Cohort analysis

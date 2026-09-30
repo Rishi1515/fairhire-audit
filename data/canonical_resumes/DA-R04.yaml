@@ -1,0 +1,39 @@
+resume_id: DA-R04
+family: data_analyst
+intended_tier: {DA-01: weak, DA-02: weak}
+generation_version: "1.0"
+status: draft
+design_notes: >
+  Weak for both jobs: a capable retail supervisor with daily sales recording and basic Excel, but no SQL,
+  dashboards, statistics or analysis work. Written to be realistic, not a caricature, so it still has
+  leadership and some reporting. The degree is at a less internationally ranked university.
+summary: >
+  Retail supervisor with nearly five years of retail experience, including three years leading store teams and handling daily sales reporting.
+experience:
+  - employer: Tampines Fashion Outlet
+    title: Retail Supervisor
+    location: Singapore
+    start: "2023-04"
+    end: null
+    bullets:
+      - Supervise a team of 8 sales associates and prepare weekly staff rosters.
+      - Record daily sales and stock deliveries in the point-of-sale system and email a daily summary to the area manager.
+      - Trained new staff on customer service standards and store procedures.
+  - employer: Orchard Shoe Gallery
+    title: Sales Associate
+    location: Singapore
+    start: "2022-01"
+    end: "2023-03"
+    bullets:
+      - Served customers and processed sales and returns.
+      - Helped with monthly stock takes.
+education:
+  - institution: Singapore University of Social Sciences
+    qualification: Bachelor of Business
+    subject: Marketing
+    start: "2018-01"
+    end: "2021-12"
+    grade: GPA 3.2 / 5.0
+skills:
+  Tools: [Microsoft Excel (basic), Microsoft Word, Point-of-sale systems]
+  Other: [Team leadership, Customer service]

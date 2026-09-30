@@ -1,0 +1,121 @@
+rubric_id: RUB-DA-01
+job_id: DA-01
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: sql
+  name: SQL querying
+  importance: essential
+  weight: 0.25
+  aliases:
+  - SQL
+  - PostgreSQL
+  - MySQL
+  - BigQuery
+  - SQL Server
+  - T-SQL
+  - Snowflake
+  observable_evidence:
+  - Wrote queries that join several tables or aggregate large datasets.
+  - Built recurring data extracts or reports from a database.
+  - Improved query speed or correctness.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: spreadsheet_analysis
+  name: Spreadsheet analysis
+  importance: essential
+  weight: 0.15
+  aliases:
+  - Excel
+  - Google Sheets
+  - pivot table
+  - VLOOKUP
+  - XLOOKUP
+  - Power Query
+  observable_evidence:
+  - Built pivot-table or lookup-based analysis used by others.
+  - Automated a manual spreadsheet report.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: dashboarding
+  name: Dashboarding and BI
+  importance: essential
+  weight: 0.2
+  aliases:
+  - Tableau
+  - Power BI
+  - Looker Studio
+  - Looker
+  - dashboard
+  - Qlik
+  observable_evidence:
+  - Built or maintained a dashboard that others used regularly.
+  - States who used the dashboard or what decision it supported.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: statistical_reasoning
+  name: Statistical reasoning and forecasting
+  importance: essential
+  weight: 0.15
+  aliases:
+  - forecast
+  - forecasting
+  - regression
+  - variance analysis
+  - statistics
+  - hypothesis test
+  - A/B test
+  observable_evidence:
+  - Explained differences between actual and forecast values.
+  - Applied a statistical method (trend, regression, test) to a business question.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: data_quality
+  name: Data cleaning and quality
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - data cleaning
+  - data validation
+  - data quality
+  - reconciliation
+  - deduplication
+  observable_evidence:
+  - Found and fixed missing, duplicated or inconsistent records.
+  - Set up checks that catch data errors.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: stakeholder_communication
+  name: Stakeholder communication
+  importance: essential
+  weight: 0.15
+  aliases:
+  - presented
+  - stakeholders
+  - recommendations
+  - business users
+  - workshop
+  observable_evidence:
+  - Presented findings or recommendations to store, operations or supply chain managers.
+  - Wrote reports, notes or documentation read by non-specialists.
+  - Changed a decision or process as a result of the analysis.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+  - Generic claims such as 'excellent communicator' with no example.
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

@@ -1,0 +1,132 @@
+rubric_id: RUB-MA-01
+job_id: MA-01
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: paid_media
+  name: Paid media platforms
+  importance: essential
+  weight: 0.2
+  aliases:
+  - Google Ads
+  - Meta Ads
+  - Facebook Ads
+  - TikTok Ads
+  - SEM
+  - paid social
+  - paid search
+  observable_evidence:
+  - Managed or analysed paid campaigns on named platforms.
+  - States budget, scale or results.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: funnel_attribution
+  name: Funnel and attribution analysis
+  importance: essential
+  weight: 0.2
+  aliases:
+  - attribution
+  - conversion funnel
+  - GA4
+  - Google Analytics
+  - UTM
+  - conversion tracking
+  observable_evidence:
+  - Analysed the path from click to purchase.
+  - Set up or audited tracking or attribution.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: campaign_testing
+  name: Campaign testing
+  importance: essential
+  weight: 0.15
+  aliases:
+  - A/B test
+  - creative test
+  - incrementality
+  - holdout
+  - experiment
+  - split test
+  observable_evidence:
+  - Designed or analysed a campaign test and reported the result.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: data_tools
+  name: SQL and spreadsheets
+  importance: essential
+  weight: 0.15
+  aliases:
+  - SQL
+  - PostgreSQL
+  - MySQL
+  - BigQuery
+  - SQL Server
+  - T-SQL
+  - Snowflake
+  - Excel
+  - Google Sheets
+  - pivot table
+  observable_evidence:
+  - Used SQL or spreadsheets to combine and analyse marketing data.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: budget_optimisation
+  name: Budget and efficiency optimisation
+  importance: essential
+  weight: 0.15
+  aliases:
+  - ROAS
+  - CPA
+  - CAC
+  - cost per acquisition
+  - budget allocation
+  - bidding
+  observable_evidence:
+  - Recommended or made budget changes based on efficiency metrics.
+  - States the effect on cost or return.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: reporting_dashboards
+  name: Reporting dashboards
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - Looker Studio
+  - Tableau
+  - Power BI
+  - dashboard
+  - Data Studio
+  observable_evidence:
+  - Built or maintained marketing performance reports used by others.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: stakeholder_communication
+  name: Stakeholder communication
+  importance: desirable
+  weight: 0.05
+  aliases:
+  - presented
+  - stakeholders
+  - recommendations
+  observable_evidence:
+  - Presented campaign results or recommendations to marketers or managers.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+  - Generic claims such as 'excellent communicator' with no example.
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

@@ -1,0 +1,46 @@
+resume_id: DA-R03
+family: data_analyst
+intended_tier: {DA-01: borderline, DA-02: weak}
+generation_version: "1.0"
+status: draft
+design_notes: >
+  Borderline for DA-01: career changer with spreadsheet reporting at work, a certificate, and one personal
+  project using SQL and Tableau. SQL and dashboards appear only in the project, not in paid work.
+  Weak for DA-02: no experiments, product metrics, Python or event data. Tests whether methods over-reward a
+  certificate and a keyword-rich project section.
+summary: >
+  Operations executive moving into data analysis. Completed the Google Data Analytics Certificate and a
+  personal project analysing public housing data with SQL and Tableau.
+experience:
+  - employer: Jurong Event Rentals
+    title: Operations Executive
+    location: Singapore
+    start: "2024-06"
+    end: null
+    bullets:
+      - Update daily booking and equipment availability sheets in Google Sheets.
+      - Created a weekly equipment utilisation summary with pivot tables for the operations manager.
+      - Schedule deliveries and collections for about 25 events a week.
+  - employer: Bedok Mobile Store
+    title: Customer Service Associate
+    location: Singapore
+    start: "2023-01"
+    end: "2024-05"
+    bullets:
+      - Resolved customer questions on mobile plans and device orders.
+      - Tracked daily store sales against targets in a shared spreadsheet.
+education:
+  - institution: Nanyang Technological University
+    qualification: Bachelor of Arts
+    subject: Economics
+    start: "2018-08"
+    end: "2022-06"
+    grade: GPA 3.4 / 5.0
+    coursework: [Introductory Econometrics, Statistics]
+skills:
+  Tools: [Google Sheets, Excel, SQL (basic), Tableau Public]
+certifications:
+  - Google Data Analytics Professional Certificate (2024)
+projects:
+  - name: HDB resale price analysis
+    description: Used SQLite and Tableau Public to analyse ten years of public HDB resale transactions and published a dashboard of price trends by town.

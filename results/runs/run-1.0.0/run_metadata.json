@@ -1,0 +1,52 @@
+{
+  "run_id": "run-1.0.0",
+  "results_schema_version": "1",
+  "package_version": "0.1.0",
+  "code_version": "no-git:src-sha256:4517d80d19e19e0a",
+  "benchmark_version": "1.0.0",
+  "variants_sha256": "40d518c174a74410661e328f98b759767f9852bfd149c32f512156b86dc3aae5",
+  "config_sha256": "7e26ca0f16d7c5294bcbfc3c79ccae8619cbfe3c19119dbda84698b57a221155",
+  "timestamp_utc": "2026-09-30T04:12:57Z",
+  "python": "3.11.15",
+  "models": {
+    "keyword": {
+      "status": "approved",
+      "match": "rubric_aliases_only",
+      "levels": "skills/summary/education only = 1, one experience or project line = 2, two or more = 3"
+    },
+    "embedding": {
+      "status": "approved",
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "format": "onnx",
+      "source_repo": "https://github.com/clems4ever/all-minilm-l6-v2-go",
+      "source_commit": "98aaab590a822d60ed359f7f8cb726e40daae4f4",
+      "sha256": {
+        "model.onnx": "994a58868f7abacacbf2192aa0aae8f56da8c4505dbde2740c861b24426ede6b",
+        "tokenizer.json": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+      },
+      "similarity": "cosine",
+      "sectioned_weights": {
+        "header": 0.05,
+        "summary": 0.1,
+        "experience": 0.5,
+        "skills": 0.25,
+        "education": 0.1
+      }
+    },
+    "llm_rubric": {
+      "status": "deferred",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "temperature": 1.0,
+      "repetitions": 5,
+      "max_output_tokens": 1200,
+      "strict_evidence": false,
+      "price_per_mtok_input": 1.0,
+      "price_per_mtok_output": 5.0,
+      "cache_dir": "results/llm_cache"
+    }
+  },
+  "llm_rows": 0,
+  "llm_status": "not_run",
+  "demo": false
+}

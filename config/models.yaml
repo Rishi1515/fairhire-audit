@@ -1,0 +1,33 @@
+# Ranking methods used in benchmark 1.0.0.
+# approved = confirmed by the applicant on 2026-09-30. deferred = built and tested, not run in this version.
+
+keyword:
+  status: approved
+  match: rubric_aliases_only        # only aliases listed in the rubric count
+  levels: "skills/summary/education only = 1, one experience or project line = 2, two or more = 3"
+
+embedding:
+  status: approved
+  model: "sentence-transformers/all-MiniLM-L6-v2"
+  format: onnx
+  # Copy of the ONNX export bundled in github.com/clems4ever/all-minilm-l6-v2-go at the commit below.
+  # It reproduces the published reference similarities for this model exactly (see tests/test_rankers.py).
+  source_repo: "https://github.com/clems4ever/all-minilm-l6-v2-go"
+  source_commit: "98aaab590a822d60ed359f7f8cb726e40daae4f4"
+  sha256:
+    model.onnx: "994a58868f7abacacbf2192aa0aae8f56da8c4505dbde2740c861b24426ede6b"
+    tokenizer.json: "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+  similarity: cosine
+  sectioned_weights: {header: 0.05, summary: 0.10, experience: 0.50, skills: 0.25, education: 0.10}
+
+llm_rubric:
+  status: deferred                 # no API budget or GPU access for now; see README "Future work"
+  provider: anthropic
+  model: "claude-haiku-4-5-20251001"
+  temperature: 1.0
+  repetitions: 5
+  max_output_tokens: 1200
+  strict_evidence: false           # true = reject any non-zero level without a quote
+  price_per_mtok_input: 1.0        # USD, used only for the cost estimate
+  price_per_mtok_output: 5.0
+  cache_dir: results/llm_cache

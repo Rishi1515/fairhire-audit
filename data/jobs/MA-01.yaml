@@ -1,0 +1,25 @@
+job_id: MA-01
+family: marketing_analyst
+title: Performance Marketing Analyst
+employer: Orchid Lane Beauty
+location: Singapore
+version: "0.1-draft"
+summary: >
+  Orchid Lane Beauty is an online skincare and cosmetics retailer selling across Southeast Asia. The growth team
+  spends most of its budget on paid search and paid social, and needs an analyst to show which campaigns work.
+responsibilities:
+  - Track and report performance of Google Ads, Meta and TikTok campaigns.
+  - Analyse the customer journey from ad click to purchase using GA4 and order data.
+  - Design and read campaign tests, such as creative tests and geographic holdouts.
+  - Recommend budget changes across channels based on cost per acquisition and return on ad spend.
+  - Maintain weekly performance dashboards for the marketing team.
+  - Explain results to channel managers and senior marketers.
+requirements:
+  - At least 2 years of experience in digital marketing analytics or paid media.
+  - Hands-on experience with Google Ads and Meta Ads reporting.
+  - Understanding of conversion funnels, attribution and tracking with GA4 and UTM parameters.
+  - Strong spreadsheet skills; SQL is a strong advantage.
+  - Experience running or analysing marketing experiments.
+nice_to_have:
+  - Experience with Looker Studio or Tableau.
+  - E-commerce experience in Southeast Asia.

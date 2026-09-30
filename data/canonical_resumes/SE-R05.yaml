@@ -1,0 +1,61 @@
+resume_id: SE-R05
+family: software_engineer
+intended_tier:
+  SE-01: borderline
+  SE-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for SE-02: React and TypeScript at scale, a WCAG review with fixes, Jest, React Testing Library and
+  Playwright tests, GraphQL, bundle size work and a component library. Borderline for SE-01: one small Node.js service only.'
+summary: Frontend engineer with five years of experience building accessible React interfaces for health and media products.
+experience:
+- employer: Kembangan Health Tech
+  title: Frontend Engineer
+  location: Singapore
+  start: 2023-04
+  end: null
+  bullets:
+  - Build patient booking and records screens in React and TypeScript, used by about 50,000 patients a month.
+  - Led an accessibility review against WCAG 2.1 AA and fixed over 120 issues, including screen reader labels and keyboard
+    navigation.
+  - Write component tests with Jest and React Testing Library, and end-to-end tests with Playwright.
+  - Integrate with GraphQL APIs using Apollo Client.
+  - Wrote a small Node.js service that combines two backend APIs for the booking screen.
+- employer: Holland Village Media
+  title: Frontend Developer
+  location: Singapore
+  start: 2021-06
+  end: 2023-03
+  bullets:
+  - Built responsive news pages in React for mobile and desktop.
+  - Reduced homepage bundle size by 35% with code splitting and lazy loading of images.
+  - Worked with designers in Figma to build a shared component library in Storybook.
+education:
+- institution: Nanyang Technological University
+  qualification: Bachelor of Engineering
+  subject: Computer Science
+  start: 2017-08
+  end: 2021-05
+  grade: GPA 3.9 / 5.0
+  coursework:
+  - Human Computer Interaction
+  - Web Application Design
+skills:
+  Languages:
+  - TypeScript
+  - JavaScript
+  - HTML
+  - CSS
+  Frameworks:
+  - React
+  - Next.js
+  - Node.js
+  Testing:
+  - Jest
+  - React Testing Library
+  - Playwright
+  Tools:
+  - GraphQL
+  - Apollo
+  - Storybook
+  - Figma

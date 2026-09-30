@@ -1,0 +1,42 @@
+resume_id: MA-R08
+family: marketing_analyst
+intended_tier:
+  MA-01: weak
+  MA-02: weak
+generation_version: '1.0'
+status: draft
+design_notes: 'Weak for both: capable B2B sales executive with Excel quotations and CRM order entry, but no marketing analysis.
+  The word CRM appears in a sales sense, which tests whether keyword matching is fooled. Studied at a highly ranked university.'
+summary: Sales executive with six years of experience in industrial and retail sales.
+experience:
+- employer: Tuas Industrial Supplies
+  title: Sales Executive
+  location: Singapore
+  start: 2022-03
+  end: null
+  bullets:
+  - Sell safety equipment to construction and shipyard customers, meeting quarterly sales targets.
+  - Visit about 15 customers a week and record orders in the company CRM.
+  - Prepare quotations in Excel.
+- employer: Jurong West Sports Outlet
+  title: Retail Sales Associate
+  location: Singapore
+  start: 2020-09
+  end: 2022-02
+  bullets:
+  - Served customers and handled product displays.
+  - Helped with stock counts.
+education:
+- institution: Nanyang Technological University
+  qualification: Bachelor of Arts
+  subject: Sociology
+  start: 2016-08
+  end: 2020-06
+  grade: GPA 3.4 / 5.0
+skills:
+  Tools:
+  - Excel
+  - Microsoft Office
+  Other:
+  - B2B sales
+  - Customer relationship management

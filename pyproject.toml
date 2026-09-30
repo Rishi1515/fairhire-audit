@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fairhire"
+version = "0.1.0"
+description = "A controlled benchmark comparing keyword, embedding and LLM resume ranking."
+authors = [{ name = "Rishi Varma" }]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.6,<3", "PyYAML>=6,<7", "numpy>=2", "scipy>=1.11", "onnxruntime>=1.17",
+                "tokenizers>=0.15", "reportlab>=4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+llm = ["anthropic>=1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

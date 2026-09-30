@@ -1,0 +1,58 @@
+resume_id: DA-R06
+family: data_analyst
+intended_tier:
+  DA-01: strong
+  DA-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for both: senior analyst covering operations dashboards, forecasting, SQL, data quality, experiments
+  with power calculations, and leadership communication, all with measured outcomes.'
+summary: Senior data analyst with seven years of experience in e-commerce and healthcare operations. Leads forecasting, dashboarding
+  and experiment analysis for operations and product teams.
+experience:
+- employer: Katong Market Online
+  title: Senior Data Analyst
+  location: Singapore
+  start: 2022-02
+  end: null
+  bullets:
+  - Lead analysis for the seller operations and checkout teams, covering about 2 million monthly orders.
+  - Built and maintain Tableau dashboards on stock availability, delivery times and checkout conversion, used by 60 managers
+    in operations and product.
+  - Write and review Snowflake SQL, including window functions, for weekly forecasting and funnel datasets.
+  - Designed and analysed A/B tests on checkout changes with power calculations and agreed success metrics; one test raised
+    checkout conversion by 1.8 percentage points.
+  - Built a Python demand forecast for the top 500 products that cut stock-outs by 12% in pilot categories.
+  - Present quarterly insights to the operations and product leadership teams.
+- employer: Novena Clinic Group
+  title: Data Analyst
+  location: Singapore
+  start: 2019-07
+  end: 2022-01
+  bullets:
+  - Built Power BI dashboards on clinic waiting times and patient volumes for 20 clinic managers.
+  - Wrote SQL Server queries combining appointment and billing data.
+  - Set up data quality checks that reduced errors in the monthly management pack.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Science (Honours)
+  subject: Statistics
+  start: 2015-08
+  end: 2019-06
+  grade: GPA 4.2 / 5.0
+  coursework:
+  - Regression Analysis
+  - Time Series Analysis
+  - Design of Experiments
+skills:
+  Data:
+  - SQL (Snowflake, SQL Server)
+  - Python (pandas, statsmodels)
+  - Excel
+  Visualisation:
+  - Tableau
+  - Power BI
+  Methods:
+  - Forecasting
+  - A/B testing
+  - Regression

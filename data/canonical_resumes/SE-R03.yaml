@@ -1,0 +1,49 @@
+resume_id: SE-R03
+family: software_engineer
+intended_tier:
+  SE-01: good
+  SE-02: weak
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for SE-01: four years of Java backend work with REST endpoints, SQL and JUnit, but mostly maintenance,
+  no schema design ownership, cloud or on-call. Weak for SE-02: no frontend work.'
+summary: Software engineer with four years of experience maintaining Java applications for banking and government clients.
+experience:
+- employer: Esplanade Commercial Bank
+  title: Software Engineer
+  location: Singapore
+  start: 2023-09
+  end: null
+  bullets:
+  - Maintain Java services for internal loan processing, adding new fields and business rules.
+  - Build REST API endpoints used by the branch loan application.
+  - Write SQL queries and stored procedures in Oracle.
+  - Write JUnit tests for new code.
+- employer: Boon Lay IT Services
+  title: Associate Software Engineer
+  location: Singapore
+  start: 2022-07
+  end: 2023-08
+  bullets:
+  - Supported Java applications for public sector clients, fixing bugs reported by users.
+  - Wrote SQL scripts to correct data issues.
+education:
+- institution: Nanyang Technological University
+  qualification: Bachelor of Engineering
+  subject: Computer Engineering
+  start: 2018-08
+  end: 2022-06
+  grade: GPA 3.6 / 5.0
+  coursework:
+  - Object Oriented Programming
+  - Database Systems
+skills:
+  Languages:
+  - Java
+  - SQL
+  Frameworks:
+  - Spring
+  Tools:
+  - Oracle Database
+  - JUnit
+  - Git

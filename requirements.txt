@@ -1,0 +1,9 @@
+# Pinned versions used for benchmark v1.0.0. Why each package is here: see README.
+pydantic==2.13.3
+PyYAML==6.0.3
+numpy==2.4.4
+scipy==1.17.1
+onnxruntime==1.25.0
+tokenizers==0.23.2
+reportlab==4.4.10
+pytest==8.4.2

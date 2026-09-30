@@ -1,0 +1,7 @@
+method,mitigation,format_topk_jaccard,format_rank_spearman,repeat_runs,mean_within_sample_sd,deterministic
+embedding,none,0.800000,0.904762,1,0.000000,True
+embedding,anonymised,0.933333,0.956349,1,0.000000,True
+embedding,structured_evidence,1.000000,1.000000,1,0.000000,True
+embedding_sectioned,none,1.000000,0.996032,1,0.000000,True
+embedding_sectioned,anonymised,1.000000,1.000000,1,0.000000,True
+keyword,none,1.000000,1.000000,1,0.000000,True

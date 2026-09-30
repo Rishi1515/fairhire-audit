@@ -1,0 +1,49 @@
+resume_id: DA-R07
+family: data_analyst
+intended_tier:
+  DA-01: borderline
+  DA-02: good
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for DA-02: under two years, but real product analysis with SQL on events, Python, funnels and supervised
+  A/B tests. Borderline for DA-01: no spreadsheet or forecasting depth and no operations work.'
+summary: Product analyst with under two years of experience in education technology. Works with SQL, Python and dashboards
+  to track how learners use the app.
+experience:
+- employer: Punggol Learning Labs
+  title: Product Analyst
+  location: Singapore
+  start: 2025-03
+  end: null
+  bullets:
+  - Track weekly active users and lesson completion funnels in Metabase dashboards.
+  - Analysed 3 A/B tests on reminder notifications with a senior analyst, including checking whether sample sizes were large
+    enough.
+  - Write PostgreSQL queries on event tables and analyse results in Python (pandas).
+  - Share short weekly notes on product metrics with the product manager.
+- employer: Changi Travel Deals
+  title: Data Analytics Intern
+  location: Singapore
+  start: 2024-06
+  end: 2024-12
+  bullets:
+  - Cleaned booking data in Python and built charts for the marketing team.
+  - Wrote simple SQL queries to count bookings by channel.
+education:
+- institution: Nanyang Technological University
+  qualification: Bachelor of Science (Honours)
+  subject: Mathematical Sciences
+  start: 2020-08
+  end: 2024-05
+  grade: GPA 3.9 / 5.0
+  coursework:
+  - Probability
+  - Statistical Inference
+  - Data Structures
+skills:
+  Data:
+  - SQL (PostgreSQL)
+  - Python (pandas, SciPy)
+  - Excel
+  Visualisation:
+  - Metabase

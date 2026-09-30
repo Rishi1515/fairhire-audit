@@ -1,0 +1,24 @@
+job_id: MA-02
+family: marketing_analyst
+title: CRM and Customer Insights Analyst
+employer: Harbourfront Grocers
+location: Singapore
+version: "0.1-draft"
+summary: >
+  Harbourfront Grocers is a supermarket chain with a loyalty programme of about 600,000 members. The CRM team uses
+  loyalty and transaction data to keep customers coming back and to understand what they want.
+responsibilities:
+  - Segment loyalty members by purchase behaviour and value.
+  - Analyse retention, churn and customer lifetime value by cohort.
+  - Plan and measure email and app push campaigns in the CRM platform.
+  - Run customer surveys and summarise the results together with purchase data.
+  - Turn analysis into clear recommendations for the marketing and category teams.
+requirements:
+  - At least 2 years of experience in CRM, customer analytics or market research.
+  - Experience building customer segments and analysing retention or churn.
+  - Experience with a CRM or email marketing platform such as Salesforce Marketing Cloud, Braze or HubSpot.
+  - Strong SQL or spreadsheet skills.
+  - Ability to present insights as a clear story for non-technical audiences.
+nice_to_have:
+  - Survey design and analysis experience.
+  - Python or R.

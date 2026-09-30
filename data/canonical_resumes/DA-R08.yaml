@@ -1,0 +1,50 @@
+resume_id: DA-R08
+family: data_analyst
+intended_tier:
+  DA-01: weak
+  DA-02: borderline
+generation_version: '1.0'
+status: draft
+design_notes: 'Borderline for DA-02: UX researcher with exposure to A/B test results, funnel drop-off and strong communication,
+  but no SQL, Python or metric ownership. Weak for DA-01: no SQL, dashboards or forecasting.'
+summary: UX researcher with five years of experience in customer research and customer experience. Runs interviews, usability
+  tests and surveys and turns them into recommendations for product teams.
+experience:
+- employer: Tiong Bahru Digital Studio
+  title: UX Researcher
+  location: Singapore
+  start: 2023-01
+  end: null
+  bullets:
+  - Plan and run usability tests and customer interviews for banking and retail app clients.
+  - Worked with a client's analytics team to review A/B test results for a new sign-up flow, and explained interview findings
+    about where users dropped off.
+  - Run surveys in Qualtrics and summarise the results in slide decks for product teams.
+  - Present research findings and recommendations to client product managers.
+- employer: Queenstown Mobile Care
+  title: Customer Experience Executive
+  location: Singapore
+  start: 2021-08
+  end: 2022-12
+  bullets:
+  - Collected customer feedback and prepared monthly summaries of common complaints in Excel.
+  - Handled customer escalations for a team of 12.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Science
+  subject: Psychology
+  start: 2017-07
+  end: 2021-06
+  grade: GPA 3.7 / 5.0
+  coursework:
+  - Research Methods
+  - Statistics for Psychology
+skills:
+  Research:
+  - Usability testing
+  - Customer interviews
+  - Survey design
+  Tools:
+  - Qualtrics
+  - Figma
+  - Excel

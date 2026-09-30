@@ -1,0 +1,121 @@
+rubric_id: RUB-DA-02
+job_id: DA-02
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: sql
+  name: SQL on event data
+  importance: essential
+  weight: 0.25
+  aliases:
+  - SQL
+  - PostgreSQL
+  - MySQL
+  - BigQuery
+  - SQL Server
+  - T-SQL
+  - Snowflake
+  - window function
+  observable_evidence:
+  - Wrote SQL on event or transaction data, including window functions.
+  - Built datasets used for product analysis.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: experimentation
+  name: Experiment design and analysis
+  importance: essential
+  weight: 0.2
+  aliases:
+  - A/B test
+  - A/B testing
+  - experiment
+  - statistical significance
+  - sample size
+  - hypothesis test
+  observable_evidence:
+  - Designed or analysed an A/B test and reported the result.
+  - Considered sample size, duration or significance.
+  - Stated limits of an experiment result.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: product_metrics
+  name: Product metrics
+  importance: essential
+  weight: 0.2
+  aliases:
+  - funnel
+  - conversion
+  - retention
+  - cohort
+  - activation
+  - KPI
+  - DAU
+  - MAU
+  observable_evidence:
+  - Defined or tracked funnel, activation or retention metrics.
+  - Ran cohort or funnel analysis.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: python_analysis
+  name: Python or R for analysis
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - Python
+  - pandas
+  - Jupyter
+  - R
+  - NumPy
+  observable_evidence:
+  - Used Python or R to clean, analyse or model data in a described task.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: dashboarding
+  name: Dashboarding
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - Tableau
+  - Looker
+  - Looker Studio
+  - Power BI
+  - Metabase
+  - dashboard
+  observable_evidence:
+  - Built a dashboard that a product or business team used.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: stakeholder_communication
+  name: Stakeholder communication
+  importance: essential
+  weight: 0.15
+  aliases:
+  - presented
+  - stakeholders
+  - recommendations
+  - business users
+  - workshop
+  observable_evidence:
+  - Presented findings or recommendations to product managers, designers or business teams.
+  - Wrote reports, notes or documentation read by non-specialists.
+  - Changed a decision or process as a result of the analysis.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+  - Generic claims such as 'excellent communicator' with no example.
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

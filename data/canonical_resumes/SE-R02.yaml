@@ -1,0 +1,60 @@
+resume_id: SE-R02
+family: software_engineer
+intended_tier:
+  SE-01: strong
+  SE-02: good
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for SE-01: Java Spring Boot APIs, schema design, migrations, tests, Kubernetes CI/CD and production
+  support. Good for SE-02: real React and TypeScript work with Jest tests, but no accessibility or performance evidence.'
+summary: Full stack engineer with almost five years of experience building Java services and React interfaces for insurance
+  and retail systems.
+experience:
+- employer: Raffles Place Insurance Digital
+  title: Full Stack Engineer
+  location: Singapore
+  start: 2023-06
+  end: null
+  bullets:
+  - Build Java Spring Boot services and REST APIs for the online claims system, used by about 30,000 customers a month.
+  - Designed PostgreSQL schemas for claims data and wrote Flyway database migrations.
+  - Write JUnit and integration tests, and set up contract tests between frontend and backend.
+  - Build React and TypeScript screens for the claims form and connect them to the REST APIs.
+  - Deploy with Docker and Kubernetes on Azure through a Jenkins CI/CD pipeline.
+- employer: Bishan Retail Systems
+  title: Software Engineer
+  location: Singapore
+  start: 2022-01
+  end: 2023-05
+  bullets:
+  - Built Java REST APIs for a point-of-sale back office.
+  - Fixed production issues found through logging and on-call support.
+  - Built React components for the store manager dashboard and wrote Jest tests for them.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Computing
+  subject: Computer Science
+  start: 2017-08
+  end: 2021-12
+  grade: GPA 4.0 / 5.0
+  coursework:
+  - Software Engineering
+  - Database Systems
+  - Web Development
+skills:
+  Languages:
+  - Java
+  - TypeScript
+  - SQL
+  Frameworks:
+  - Spring Boot
+  - React
+  Infrastructure:
+  - PostgreSQL
+  - Docker
+  - Kubernetes
+  - Azure
+  - Jenkins
+  Testing:
+  - JUnit
+  - Jest

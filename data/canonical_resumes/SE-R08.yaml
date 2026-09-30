@@ -1,0 +1,51 @@
+resume_id: SE-R08
+family: software_engineer
+intended_tier:
+  SE-01: weak
+  SE-02: good
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for SE-02: strong frontend testing with Playwright and Cypress, TypeScript, accessibility checks and one
+  internal React dashboard. Weak for SE-01: no backend work.'
+summary: QA automation engineer with five years of experience testing web applications, moving towards frontend development.
+experience:
+- employer: Buona Vista Software
+  title: QA Automation Engineer
+  location: Singapore
+  start: 2023-03
+  end: null
+  bullets:
+  - Build and maintain end-to-end test suites in Playwright and TypeScript for a web HR system, covering about 400 test cases.
+  - Built an internal React dashboard that shows test results and flaky tests for the engineering team.
+  - Added accessibility checks with axe to the test suite and reported issues to developers.
+  - Run the test suites in the GitHub Actions CI pipeline.
+- employer: Farrer Park Tech
+  title: QA Engineer
+  location: Singapore
+  start: 2021-09
+  end: 2023-02
+  bullets:
+  - Wrote Cypress tests for a React web app and tested pages at different screen sizes.
+  - Reported and tracked bugs in Jira.
+education:
+- institution: Singapore Institute of Technology
+  qualification: Bachelor of Science (Honours)
+  subject: Information and Communications Technology
+  start: 2017-09
+  end: 2021-08
+  grade: GPA 3.7 / 5.0
+  coursework:
+  - Software Testing
+  - Web Programming
+skills:
+  Languages:
+  - TypeScript
+  - JavaScript
+  Testing:
+  - Playwright
+  - Cypress
+  - axe
+  Tools:
+  - React (basic)
+  - GitHub Actions
+  - Jira

@@ -1,0 +1,25 @@
+job_id: SE-01
+family: software_engineer
+title: Backend Software Engineer
+employer: Pasir Freight Systems
+location: Singapore
+version: "0.1-draft"
+summary: >
+  Pasir Freight Systems builds shipment tracking and warehouse software for regional logistics companies.
+  The platform team owns the services and APIs that customers and internal apps depend on.
+responsibilities:
+  - Design, build and maintain backend services and REST APIs in Python or Java.
+  - Model data and write efficient queries for PostgreSQL databases.
+  - Write unit and integration tests and keep the test suite reliable.
+  - Deploy services with Docker and the team's CI/CD pipeline on AWS.
+  - Investigate production issues using logs and monitoring, and take part in a shared on-call rotation.
+  - Review teammates' code and contribute to short design documents.
+requirements:
+  - At least 2 years of professional software development experience.
+  - Strong skills in at least one backend language, preferably Python, Java or Go.
+  - Experience designing and building REST APIs.
+  - Good understanding of relational databases, schema design and indexing.
+  - Habit of writing automated tests.
+nice_to_have:
+  - Experience with Docker, Kubernetes or a public cloud platform.
+  - Experience with monitoring tools and production support.

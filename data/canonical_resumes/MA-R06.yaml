@@ -1,0 +1,44 @@
+resume_id: MA-R06
+family: marketing_analyst
+intended_tier:
+  MA-01: borderline
+  MA-02: good
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for MA-02: runs email campaigns in Klaviyo and Mailchimp with simple segments, tracks repeat purchase
+  and ran a survey. Borderline for MA-01: only small festive Facebook campaigns.'
+summary: CRM executive with five years of experience in email marketing for small retail brands.
+experience:
+- employer: Kovan Pet Supplies
+  title: CRM Executive
+  location: Singapore
+  start: 2023-05
+  end: null
+  bullets:
+  - Plan and send weekly email campaigns in Klaviyo to about 80,000 subscribers.
+  - Split customers into groups by last purchase date and pet type for targeted emails.
+  - Track the repeat purchase rate of email customers in Excel and report it monthly.
+  - Ran a short customer survey in Google Forms about delivery preferences.
+- employer: Serangoon Garden Florist
+  title: Marketing Assistant
+  location: Singapore
+  start: 2021-09
+  end: 2023-04
+  bullets:
+  - Sent monthly Mailchimp newsletters and updated the website.
+  - Helped run small Facebook ad campaigns for festive seasons.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Business
+  subject: Marketing
+  start: 2017-07
+  end: 2021-06
+  grade: GPA 3.5 / 5.0
+skills:
+  Platforms:
+  - Klaviyo
+  - Mailchimp
+  Tools:
+  - Excel
+  - Google Forms
+  - Canva

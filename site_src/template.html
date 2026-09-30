@@ -1,0 +1,448 @@
+<title>FairHire Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a research notebook. One reading column, five plain tabs, one chart per question, detail folded away. */
+:root {
+  --paper: #f6f3ee;
+  --sheet: #fcfaf7;
+  --ink: #27282c;
+  --muted: #66625d;
+  --rule: #dcd5cb;
+  --burgundy: #7b2d3d;
+  --slate: #4b6179;
+  --mark: #f0dde1;
+  --mark-ink: #5e1f2c;
+  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1c1b1d; --sheet: #242226; --ink: #e8e3dc; --muted: #a39d95; --rule: #3a363b;
+    --burgundy: #dc8e9c; --slate: #94abc6; --mark: #4a2a32; --mark-ink: #f4d3da; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1c1b1d; --sheet: #242226; --ink: #e8e3dc; --muted: #a39d95; --rule: #3a363b;
+  --burgundy: #dc8e9c; --slate: #94abc6; --mark: #4a2a32; --mark-ink: #f4d3da; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 var(--body); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; }
+header.site { border-bottom: 1px solid var(--rule); padding-block: 28px 0; }
+h1 { font: 600 2.1rem/1.1 var(--display); margin: 0; letter-spacing: -0.01em; }
+.byline { margin: 6px 0 0; font-weight: 500; }
+.tag { color: var(--muted); margin: 4px 0 0; }
+.story { display: grid; gap: 12px; padding-left: 16px; border-left: 2px solid var(--slate); }
+.source { font-size: 0.8rem; color: var(--muted); }
+.note { margin-block: 12px 0; font-size: 0.85rem; color: var(--muted); max-width: 70ch; }
+nav.tabs { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-top: 18px; }
+nav.tabs a { color: var(--muted); text-decoration: none; padding-block: 8px 10px; border-bottom: 2px solid transparent; font-weight: 500; }
+nav.tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--burgundy); }
+nav.tabs a:hover { color: var(--ink); }
+a:focus-visible, select:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--slate); outline-offset: 2px; }
+main { padding-block: 32px 72px; }
+section.page { display: grid; gap: 36px; }
+.block { display: grid; gap: 12px; }
+h2 { font: 600 1.5rem/1.25 var(--display); margin: 0; text-wrap: balance; }
+h3 { font: 600 1.12rem/1.3 var(--display); margin: 0; text-wrap: balance; }
+p { margin: 0; max-width: 66ch; }
+.lede { font-size: 1.12rem; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px 28px; counter-reset: step; }
+.steps div { display: grid; gap: 4px; }
+.steps div::before { counter-increment: step; content: counter(step); font: 600 1.4rem var(--display); color: var(--burgundy); }
+.study { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding-block: 14px; display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px 24px; }
+.study div { display: grid; gap: 2px; }
+.study .v { font: 500 1.15rem var(--mono); font-variant-numeric: tabular-nums; }
+.finding { display: grid; gap: 6px; padding-left: 16px; border-left: 2px solid var(--burgundy); }
+.methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; }
+.methods div { display: grid; gap: 4px; align-content: start; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: end; }
+.controls label { display: grid; gap: 4px; font-size: 0.8rem; color: var(--muted); }
+select { font: 15px var(--body); color: var(--ink); background: var(--sheet); border: 1px solid var(--rule);
+         border-radius: 4px; padding: 7px 9px; max-width: 100%; }
+.answer { font: 400 1.35rem/1.45 var(--display); max-width: 40ch; }
+.answer .num { font-variant-numeric: tabular-nums; font-weight: 600; }
+.pos { color: var(--burgundy); } .neg { color: var(--slate); }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cols > * { min-width: 0; }
+.resume { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px;
+          font: 12.5px/1.55 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; margin: 0; max-height: 480px; overflow: auto; }
+.resume mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+.scroll table { min-width: 520px; }
+th, td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; color: var(--muted); font-size: 0.78rem; }
+td.n, th.n { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr.group td { font-weight: 600; color: var(--muted); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 0; padding-top: 16px; }
+td.moved { color: var(--burgundy); font-weight: 500; }
+.chart { overflow-x: auto; }
+.chart svg { width: 100%; min-width: 520px; height: auto; display: block; }
+.chart text { fill: var(--ink); font-family: var(--body); font-size: 13px; }
+.chart .axis text { fill: var(--muted); font-size: 11px; }
+.chart .grid { stroke: var(--rule); }
+.takeaway { font-weight: 500; }
+.def { font-size: 0.85rem; color: var(--muted); max-width: 72ch; }
+details { border-top: 1px solid var(--rule); padding-top: 10px; }
+details > summary { cursor: pointer; color: var(--slate); font-size: 0.9rem; font-weight: 500; }
+details[open] > summary { margin-bottom: 12px; }
+details > div { display: grid; gap: 12px; }
+.case { display: grid; gap: 6px; padding-block: 14px; border-top: 1px solid var(--rule); }
+.case:first-child { border-top: 0; }
+.pill { font: 500 0.72rem var(--mono); border: 1px solid var(--rule); border-radius: 999px; padding: 1px 8px; color: var(--muted); }
+.case .head { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+button.link { font: inherit; font-size: 0.85rem; color: var(--slate); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; justify-self: start; }
+code { font: 0.88em var(--mono); }
+pre.cmd { font: 12.5px/1.6 var(--mono); background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 12px 14px; overflow-x: auto; margin: 0; }
+.error { border: 1px solid var(--burgundy); color: var(--burgundy); padding: 14px; border-radius: 4px; }
+@media (max-width: 720px) { .cols { grid-template-columns: 1fr; } h1 { font-size: 1.7rem; } .answer { font-size: 1.15rem; } }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <h1>FairHire Audit</h1>
+    <p class="byline">A project by Rishi Varma</p>
+    <p class="tag">Do resume-scoring programs give the same score to the same resume when only the name changes?</p>
+    <p class="note">All resumes, names and employers here are made up. The results describe how three scoring methods behaved on this test set, not any real employer or applicant.</p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#overview">Summary</a><a href="#pairs">See an example</a><a href="#results">Results</a><a href="#failures">Mistakes</a><a href="#method">How it was done</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap" id="app"></main>
+<script type="application/json" id="site-data">__SITE_DATA__</script>
+<script>
+(function () {
+  "use strict";
+  const EXPECTED_VERSION = "1";
+  const app = document.getElementById("app");
+  let D;
+  try { D = JSON.parse(document.getElementById("site-data").textContent); } catch (e) { D = null; }
+  if (!D || D.version !== EXPECTED_VERSION || !D.summary || D.summary.summary_version !== EXPECTED_VERSION) {
+    app.innerHTML = '<div class="error">These result files were made by a different version of the analysis code, so the site will not show them. Re-run <code>python scripts/analyse_results.py</code> and <code>python scripts/build_site.py</code>.</div>';
+    return;
+  }
+  const S = D.summary;
+
+  // ---------------------------------------------------------------- plain labels
+  const METHOD = { keyword: "Keyword counting", embedding: "Meaning-matching", embedding_sectioned: "Section-by-section matching", llm_rubric: "AI marker" };
+  const FIX = { none: "", anonymised: "names hidden", structured_evidence: "only relevant lines" };
+  const condLabel = (m, g) => METHOD[m] + (g === "none" ? "" : ", " + FIX[g]);
+  const ATTR = { name_cue: "Name", career_gap: "Career break", institution: "University", formatting: "Section order" };
+  const MAIN = { name_cue: "name_spread", career_gap: "with_break_minus_without", institution: "higher_minus_comparison", formatting: "alternative_minus_standard" };
+  const COMPARISON = {
+    female_minus_male: "Female names vs male names", malay_minus_chinese: "Malay names vs Chinese names",
+    indian_minus_chinese: "Indian names vs Chinese names", indian_minus_malay: "Indian names vs Malay names",
+    name_spread: "Highest minus lowest of the six names", with_break_minus_without: "With a break vs without",
+    higher_minus_comparison: "Higher-ranked vs other university", alternative_minus_standard: "Skills first vs experience first"
+  };
+  const GROUPS = ["chinese_female", "chinese_male", "malay_female", "malay_male", "indian_female", "indian_male"];
+  const groupLabel = g => { const [e, s] = g.split("_"); return e[0].toUpperCase() + e.slice(1) + " name, " + s; };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const f = (x, d = 1) => (x === null || x === undefined) ? "n/a" : Number(x).toFixed(d);
+  const signed = (x, d = 1) => (x === null || x === undefined) ? "n/a" : (x > 0 ? "+" : "") + Number(x).toFixed(d);
+  const pct = x => (x === null || x === undefined) ? "n/a" : Math.round(x * 100) + "%";
+  const pval = p => (p === null || p === undefined) ? "not testable" : (p < 0.001 ? "< 0.001" : p.toFixed(3));
+  const conds = S.conditions.map(c => c.method + "|" + c.mitigation);
+  const jobById = Object.fromEntries(D.jobs.map(j => [j.job_id, j]));
+  const llmStatus = S.run.llm_status;
+  const gap = (m, g, attr) => S.gaps.find(r => r.method === m && r.mitigation === g && r.attribute === attr && r.comparison === MAIN[attr]);
+  const rel = (m, g) => S.relevance.find(r => r.method === m && r.mitigation === g);
+
+  // ---------------------------------------------------------------- scores and shortlists
+  const score = (cond, sid) => (D.scores[cond] || {})[sid];
+  const sid = (base, job, code) => base + "-" + job + "-" + code;
+  const refGroup = (base, job) => D.samples[sid(base, job, "REF")][4];
+  const nameSid = (base, job, g) => refGroup(base, job) === g ? sid(base, job, "REF") : sid(base, job, "NAME-" + g);
+  const basesForJob = job => [...new Set(Object.values(D.samples).filter(s => s[1] === job).map(s => s[0]))].sort();
+  function shortlisted(cond, sampleId, base, job) {
+    const k = S.settings.shortlist_k;
+    const pool = [[score(cond, sampleId), base]];
+    for (const other of basesForJob(job)) if (other !== base) pool.push([score(cond, sid(other, job, "REF")), other]);
+    if (pool.some(p => p[0] === undefined)) return null;
+    pool.sort((a, b) => b[0] - a[0] || (a[1] < b[1] ? -1 : 1));
+    return pool.findIndex(p => p[1] === base) < k;
+  }
+
+  // ---------------------------------------------------------------- chart: one dot per row, with its range
+  function dotPlot(rows, opts) {
+    const W = 680, left = 300, right = 24, rowH = 30, top = 6;
+    const heads = rows.filter((r, i) => r.group && (i === 0 || rows[i - 1].group !== r.group)).length;
+    const H = top + rows.length * rowH + heads * 30 + 46;
+    const x = v => left + (Math.max(opts.min, Math.min(opts.max, v)) - opts.min) / (opts.max - opts.min) * (W - left - right);
+    const bottom = H - 40;
+    let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(opts.aria)}"><g class="axis">`;
+    opts.ticks.forEach(t => { svg += `<line class="grid" x1="${x(t)}" x2="${x(t)}" y1="${top}" y2="${bottom}" /><text x="${x(t)}" y="${bottom + 16}" text-anchor="middle">${opts.tick(t)}</text>`; });
+    svg += `<text x="${left}" y="${H - 1}">${esc(opts.unit)}</text></g>`;
+    let y = top;
+    rows.forEach((r, i) => {
+      if (r.group && (i === 0 || rows[i - 1].group !== r.group)) { svg += `<text x="0" y="${y + 22}" font-weight="600">${esc(r.group)}</text>`; y += 30; }
+      const cy = y + rowH / 2, color = r.fixed ? "var(--slate)" : "var(--burgundy)";
+      y += rowH;
+      svg += `<text x="${r.group ? 14 : 0}" y="${cy + 4}">${esc(r.label)}</text>`;
+      if (r.lo !== null && r.hi !== null && r.hi > r.lo) svg += `<line x1="${x(r.lo)}" x2="${x(r.hi)}" y1="${cy}" y2="${cy}" stroke="${color}" stroke-width="2" />`;
+      const hiX = x(r.hi ?? r.est), loX = x(r.lo ?? r.est), room = hiX + 52 < W - right;
+      svg += `<circle cx="${x(r.est)}" cy="${cy}" r="5" fill="${color}" /><text x="${room ? hiX + 9 : loX - 9}" y="${cy + 4}" text-anchor="${room ? "start" : "end"}" font-family="var(--mono)" font-size="12">${opts.value(r.est)}</text>`;
+    });
+    return svg + "</svg>";
+  }
+  const niceMax = v => { for (const s of [0.5, 1, 2, 2.5, 5, 10, 20]) if (v <= s * 5) return Math.ceil(v / s) * s || s; return Math.ceil(v); };
+  const ticksFor = (max, n = 5) => Array.from({ length: n + 1 }, (_, i) => +(i * max / n).toFixed(2));
+
+  // ---------------------------------------------------------------- Summary
+  function overview() {
+    const b = S.benchmark;
+    return `<section class="page">
+      <div class="block"><h2>The idea</h2>
+        <p class="lede">If two people send in exactly the same resume with different names, a fair scoring program should give them the same score. This project checks whether that is true.</p></div>
+      <div class="block"><h2>Why I made this</h2>
+        <div class="story">
+          <p>I came across a story about an AI resume checker that treated candidates differently depending on who they seemed to be. The best-known case is Amazon's. In 2018, Reuters reported that the company dropped an experimental hiring tool after finding it marked down resumes that included the word "women's", as in "women's chess club captain".</p>
+          <p>What stuck with me is that nobody programmed it to do that. The tool learned from about ten years of past resumes, most of them from men, and copied the pattern it found. It wasn't unfair on purpose. It was repeating the people it learned from.</p>
+          <p>That left me with two questions. What exactly makes a tool like this treat two people differently? And does a simple fix, like hiding the name, actually help?</p>
+          <p>I couldn't look inside a real company's system, so I built a test where I control everything. Every resume is made up, and each copy changes only one thing. If the score moves, that one thing caused it.</p>
+        </div>
+        <p class="source">Source: Dastin, Jeffrey. "Amazon Scraps Secret AI Recruiting Tool That Showed Bias against Women." <em>Reuters</em>, 10 Oct. 2018.</p>
+      </div>
+      <div class="block"><h3>How it works</h3>
+        <div class="steps">
+          <div><strong>Write test resumes</strong><span class="muted small">${b.n_base_resumes} made-up resumes for ${D.jobs.length} Singapore jobs, from strong to weak candidates.</span></div>
+          <div><strong>Make copies that change one thing</strong><span class="muted small">The name, a one-year career break, the university, or the order of the sections. Nothing else changes.</span></div>
+          <div><strong>Score every copy and compare</strong><span class="muted small">If the score moves when only the name moved, the method is reacting to something it should ignore.</span></div>
+        </div></div>
+      <div class="study">
+        <div><span class="label">Resumes</span><span class="v">${b.n_base_resumes}</span></div>
+        <div><span class="label">Jobs</span><span class="v">${D.jobs.length}</span></div>
+        <div><span class="label">Copies scored</span><span class="v">${b.n_samples}</span></div>
+        <div><span class="label">Pairs compared</span><span class="v">${b.n_pairs}</span></div>
+      </div>
+      <div class="block"><h2>What I found</h2>
+        ${S.headlines.map(h => `<div class="finding"><h3>${esc(h.title)}</h3><p>${esc(h.text)}</p></div>`).join("")}</div>
+      <div class="block"><h2>The three scoring methods</h2>
+        <div class="methods">
+          <div><strong>Keyword counting</strong><span class="small">Looks for the job's skill words, like "SQL" or "Tableau". Gives more points when a skill appears in real work experience than when it is only listed.</span></div>
+          <div><strong>Meaning-matching</strong><span class="small">Turns the resume and the job ad into numbers that capture their meaning, then measures how close they are. It reads everything, including the name. A second version reads each section separately.</span></div>
+          <div><strong>AI marker</strong><span class="small">An AI model scores each skill and must quote the resume as proof. ${llmStatus === "not_run" ? "Built and tested, but not run in this version. Running it is planned as future work, so no AI results are shown on this site." : "Status: " + esc(llmStatus) + "."}</span></div>
+        </div>
+        <p class="def">Every method gives a score from 0 to 100. Scores from different methods are not comparable with each other; what matters is whether one method's score changes between two copies.</p></div>
+      <div class="block"><h3>What this does not show</h3>
+        <p class="small">This is a small, made-up test set, so it cannot say how often real hiring tools are unfair, and it is not a finding of discrimination by anyone. The strong-to-weak order of the resumes was set by the same person who wrote the skill lists, which favours keyword counting. Every number on this site is read from <code>results/final_metrics.csv</code> and related files in the project.</p></div>
+    </section>`;
+  }
+
+  // ---------------------------------------------------------------- See an example
+  const pairState = {};
+  function initPairState() {
+    const c = S.failure_cases.find(x => x.kind === "largest_name_cue_gap" && x.method === "embedding") || {};
+    const a = c.a ? D.samples[c.a.sample_id] : null, bb = c.b ? D.samples[c.b.sample_id] : null;
+    Object.assign(pairState, { job: a ? a[1] : D.jobs[0].job_id, base: a ? a[0] : basesForJob(D.jobs[0].job_id)[0],
+      attr: "name_cue", ga: a ? a[4] : GROUPS[0], gb: bb ? bb[4] : GROUPS[1] });
+  }
+  function pairSamples() {
+    const { job, base, attr, ga, gb } = pairState;
+    if (attr === "name_cue") return [nameSid(base, job, ga), nameSid(base, job, gb)];
+    if (attr === "career_gap") return [sid(base, job, "REF"), sid(base, job, "GAP")];
+    if (attr === "institution") return [sid(base, job, "INST-COMP"), sid(base, job, "INST-HIGH")];
+    return [sid(base, job, "REF"), sid(base, job, "FMT-ALT")];
+  }
+  function sideLabel(which) {
+    const a = pairState.attr;
+    if (a === "name_cue") return groupLabel(which === "a" ? pairState.ga : pairState.gb);
+    if (a === "career_gap") return which === "a" ? "No career break" : "With a one-year career break";
+    if (a === "institution") return which === "a" ? "Less internationally known university" : "Higher-ranked university";
+    return which === "a" ? "Experience first" : "Skills moved to the top";
+  }
+  function markDiff(text, other) {
+    const set = new Set(other.split("\n"));
+    return text.split("\n").map(l => set.has(l) || !l.trim() ? esc(l) : `<mark>${esc(l)}</mark>`).join("\n");
+  }
+  function pairs() {
+    const st = pairState;
+    const [a, b] = pairSamples();
+    const ta = D.texts[D.samples[a][5]], tb = D.texts[D.samples[b][5]];
+    const main = "embedding|none";
+    const sa = score(main, a), sb = score(main, b), d = sb - sa;
+    const da = shortlisted(main, a, st.base, st.job), db = shortlisted(main, b, st.base, st.job);
+    const job = jobById[st.job], tier = D.samples[sid(st.base, st.job, "REF")][2];
+    const opt = (v, cur, label) => `<option value="${esc(v)}"${v === cur ? " selected" : ""}>${esc(label)}</option>`;
+    const same = st.attr === "name_cue" && st.ga === st.gb;
+    const row = c => { const [m, g] = c.split("|"), x = score(c, a), y = score(c, b), diff = y - x;
+      return `<tr><td>${esc(condLabel(m, g))}</td><td class="n">${f(x)}</td><td class="n">${f(y)}</td><td class="n ${Math.abs(diff) >= 0.05 ? "moved" : ""}">${Math.abs(diff) < 0.05 ? "same" : signed(diff)}</td></tr>`; };
+    const plain = conds.filter(c => c.endsWith("|none")), fixed = conds.filter(c => !c.endsWith("|none"));
+    const verdict = same ? "Pick two different names to compare."
+      : Math.abs(d) < 0.05 ? `Meaning-matching gave both versions the same score (<span class="num">${f(sa)}</span>).`
+      : `Meaning-matching scored B <span class="num ${d > 0 ? "pos" : "neg"}">${f(Math.abs(d))} points ${d > 0 ? "higher" : "lower"}</span> than A (<span class="num">${f(sa)}</span> vs <span class="num">${f(sb)}</span>).`;
+    const shortline = (da === null || same) ? "" : da === db
+      ? `Either way, this candidate ${da ? "makes" : "misses"} the top ${S.settings.shortlist_k} of ${basesForJob(st.job).length}.`
+      : `<strong>That changes the outcome:</strong> A ${da ? "makes" : "misses"} the top ${S.settings.shortlist_k} and B ${db ? "makes" : "misses"} it.`;
+    return `<section class="page">
+      <div class="block"><h2>See an example</h2>
+        <p>Two copies of the same resume. Only the highlighted lines differ. The first view shows the biggest name effect found.</p></div>
+      <div class="controls">
+        <label for="f-job">Job<select id="f-job">${D.jobs.map(j => opt(j.job_id, st.job, j.title)).join("")}</select></label>
+        <label for="f-base">Resume<select id="f-base">${basesForJob(st.job).map(bs => opt(bs, st.base, bs + " (" + D.samples[sid(bs, st.job, "REF")][2] + " candidate)")).join("")}</select></label>
+        <label for="f-attr">What changes<select id="f-attr">${Object.keys(ATTR).map(k => opt(k, st.attr, ATTR[k])).join("")}</select></label>
+        ${st.attr === "name_cue" ? `<label for="f-ga">Name A<select id="f-ga">${GROUPS.map(g => opt(g, st.ga, groupLabel(g))).join("")}</select></label>
+        <label for="f-gb">Name B<select id="f-gb">${GROUPS.map(g => opt(g, st.gb, groupLabel(g))).join("")}</select></label>` : ""}
+      </div>
+      <div class="block">
+        <p class="small muted">${esc(job.title)} · a ${esc(tier)} candidate by design</p>
+        <p class="answer">${verdict} ${shortline}</p>
+      </div>
+      <div class="scroll"><table><thead><tr><th>Scoring method</th><th class="n">A</th><th class="n">B</th><th class="n">Change</th></tr></thead><tbody>
+        <tr class="group"><td colspan="4">Normal scoring</td></tr>${plain.map(row).join("")}
+        <tr class="group"><td colspan="4">With a fix applied</td></tr>${fixed.map(row).join("")}
+      </tbody></table></div>
+      <div class="cols">
+        <div class="block"><span class="label">A: ${esc(sideLabel("a"))}</span><pre class="resume">${markDiff(ta, tb)}</pre></div>
+        <div class="block"><span class="label">B: ${esc(sideLabel("b"))}</span><pre class="resume">${markDiff(tb, ta)}</pre></div>
+      </div>
+      <p class="def">Scores are out of 100. "Names hidden" means the name and email were replaced with "Candidate" before scoring. "Only relevant lines" means the method read just the lines that match the job's skills. When the section order changes, whole sections are highlighted because they moved, even though no words changed.</p>
+    </section>`;
+  }
+  function bindPairs() {
+    const on = (id, key, reset) => { const el = document.getElementById(id); if (el) el.addEventListener("change", () => { pairState[key] = el.value; if (reset) reset(); render(); }); };
+    on("f-job", "job", () => { if (!basesForJob(pairState.job).includes(pairState.base)) pairState.base = basesForJob(pairState.job)[0]; });
+    on("f-base", "base"); on("f-attr", "attr"); on("f-ga", "ga"); on("f-gb", "gb");
+  }
+
+  // ---------------------------------------------------------------- Results
+  const resultsState = { showFixes: false };
+  function results() {
+    const plainMethods = S.conditions.filter(c => c.mitigation === "none").map(c => c.method);
+    const q1conds = S.conditions.filter(c => resultsState.showFixes || c.mitigation === "none");
+    const q1 = [];
+    Object.keys(ATTR).forEach(attr => q1conds.forEach(c => {
+      const r = gap(c.method, c.mitigation, attr);
+      if (r) q1.push({ attr, group: ATTR[attr] + (attr === "name_cue" ? " (highest minus lowest of six names)" : ""), label: condLabel(c.method, c.mitigation), est: r.mean_abs_gap, lo: r.abs_low, hi: r.abs_high, fixed: c.mitigation !== "none", flip: r.flip_rate });
+    }));
+    const q1max = niceMax(Math.max(...q1.map(r => r.hi)));
+    const worst = q1.filter(r => !r.fixed).sort((x, y) => y.est - x.est)[0];
+    const q2 = S.relevance.map(r => ({ label: condLabel(r.method, r.mitigation), est: r.tier_accuracy, lo: r.tier_accuracy_low, hi: r.tier_accuracy_high, fixed: r.mitigation !== "none" }));
+    const best = [...q2].sort((x, y) => y.est - x.est)[0];
+    const emb = rel("embedding", "none"), anon = rel("embedding", "anonymised");
+    const fmtRows = S.stability.filter(r => r.mitigation === "none");
+    const unstable = fmtRows.filter(r => r.format_topk_jaccard !== null && r.format_topk_jaccard < 1);
+    return `<section class="page">
+      <div class="block"><h2>1. How much does one change move the score?</h2>
+        <p class="takeaway">The biggest effect: changing the ${esc(ATTR[worst.attr].toLowerCase())} with ${esc(worst.label)}, about ${f(worst.est)} points out of 100 on average, changing the top-4 shortlist in ${pct(worst.flip)} of cases. Keyword counting did not move at all.</p>
+        <div class="controls"><label for="f-fixes">Show<select id="f-fixes"><option value="0"${resultsState.showFixes ? "" : " selected"}>Normal scoring only</option><option value="1"${resultsState.showFixes ? " selected" : ""}>Also with fixes applied</option></select></label></div>
+        <div class="chart">${dotPlot(q1, { min: 0, max: q1max, ticks: ticksFor(q1max), tick: t => t, value: v => f(v), unit: "average points moved (out of 100)", aria: "Average score change by what changed and by method" })}</div>
+        <p class="def">Dot = average size of the score change between two copies that differ in one thing. Line = the range the true average probably falls in (95% confidence). For names, it is the gap between the highest and lowest of six names. Based on ${S.benchmark.n_base_resumes} resumes, each scored for 2 jobs.</p>
+        <details><summary>Show full statistics for this question</summary><div>
+          <div class="scroll"><table><thead><tr><th>Method</th><th>Comparison</th><th class="n">Average change (95% range)</th><th class="n">Over ${S.settings.material_gap_points} pts</th><th class="n">Shortlist changed</th><th class="n">p (Holm)</th></tr></thead><tbody>
+          ${S.gaps.map(r => `<tr><td>${esc(condLabel(r.method, r.mitigation))}</td><td>${esc(COMPARISON[r.comparison])}</td><td class="n">${r.mean_signed_gap === null ? f(r.mean_abs_gap, 2) + " (size)" : signed(r.mean_signed_gap, 2) + " (" + signed(r.signed_low, 2) + " to " + signed(r.signed_high, 2) + ")"}</td><td class="n">${pct(r.share_material)}</td><td class="n">${r.flip_rate === null ? "" : pct(r.flip_rate)}</td><td class="n">${r.mean_signed_gap === null ? "" : pval(r.p_holm)}</td></tr>`).join("")}
+          </tbody></table></div>
+          <p class="def">Positive means the second option in the comparison scored higher. p (Holm): chance of seeing a gap this consistent if there were no real effect, adjusted for running many tests. Below 0.05 is usually called significant. "Not testable" means every gap was exactly zero.</p>
+        </div></details>
+      </div>
+      <div class="block"><h2>2. Which method ranks strong candidates above weak ones?</h2>
+        <p class="takeaway">${esc(best.label)} did best, putting the stronger of two candidates first ${pct(best.est)} of the time. Hiding names raised meaning-matching from ${pct(emb.tier_accuracy)} to ${pct(anon.tier_accuracy)}.</p>
+        <div class="chart">${dotPlot(q2, { min: 0.5, max: 1, ticks: [0.5, 0.6, 0.7, 0.8, 0.9, 1], tick: t => Math.round(t * 100) + "%", value: v => pct(v), unit: "stronger candidate ranked first (50% = guessing)", aria: "How often each method ranks the stronger candidate first" })}</div>
+        <p class="def">For every two candidates for the same job where one was designed to be stronger, did the method score that one higher? Based on ${S.relevance[0].n_cross_tier_pairs} such pairs. The strong-to-weak order was set by the same person who wrote the keyword lists, so this favours keyword counting.</p>
+        <details><summary>Show results for each job</summary><div><div class="scroll"><table><thead><tr><th>Method</th>${D.jobs.map(j => `<th class="n">${esc(j.job_id)}</th>`).join("")}</tr></thead><tbody>
+          ${S.relevance.map(r => `<tr><td>${esc(condLabel(r.method, r.mitigation))}</td>${D.jobs.map(j => `<td class="n">${r.per_job[j.job_id] ? f(r.per_job[j.job_id].spearman, 2) : ""}</td>`).join("")}</tr>`).join("")}
+          </tbody></table></div><p class="def">Rank agreement with the intended order within each job, from -1 (reversed) to 1 (perfect). ${D.jobs.map(j => esc(j.job_id) + " = " + esc(j.title)).join("; ")}.</p></div></details>
+      </div>
+      <div class="block"><h2>3. Does the layout change the shortlist?</h2>
+        <p class="takeaway">${unstable.length ? `Only ${unstable.map(r => esc(METHOD[r.method])).join(" and ")} picked a different top 4 when the skills section was moved to the top (${unstable.map(r => pct(r.format_topk_jaccard)).join(", ")} overlap with the original shortlist).` : "No method picked a different top 4 when the sections were reordered."} Repeated runs give identical results for these methods; that only matters for the AI marker, which ${llmStatus === "not_run" ? "was not run yet" : "has status " + esc(llmStatus)}.</p>
+        <details><summary>Show stability table</summary><div><div class="scroll"><table><thead><tr><th>Method</th><th class="n">Same top 4 after reordering</th><th class="n">Same overall order</th></tr></thead><tbody>
+          ${S.stability.map(r => `<tr><td>${esc(condLabel(r.method, r.mitigation))}</td><td class="n">${pct(r.format_topk_jaccard)}</td><td class="n">${f(r.format_rank_spearman, 2)}</td></tr>`).join("")}
+          </tbody></table></div></div></details>
+      </div>
+      <div class="block"><h2>4. Do the fixes help?</h2>
+        <div class="scroll"><table><thead><tr><th>Meaning-matching</th><th class="n">Name</th><th class="n">Career break</th><th class="n">University</th><th class="n">Section order</th><th class="n">Strong ranked first</th></tr></thead><tbody>
+          ${S.conditions.filter(c => c.method === "embedding").map(c => `<tr><td>${c.mitigation === "none" ? "No fix" : esc(FIX[c.mitigation][0].toUpperCase() + FIX[c.mitigation].slice(1))}</td>${Object.keys(ATTR).map(a => `<td class="n">${f(gap(c.method, c.mitigation, a).mean_abs_gap)}</td>`).join("")}<td class="n">${pct(rel(c.method, c.mitigation).tier_accuracy)}</td></tr>`).join("")}
+        </tbody></table></div>
+        <p class="def">Average points moved for each change. Hiding names removes only the name effect. Reading only relevant lines removes everything, but only because it throws away the name, dates and university before scoring.</p>
+      </div>
+    </section>`;
+  }
+  function bindResults() {
+    const el = document.getElementById("f-fixes");
+    if (el) el.addEventListener("change", () => { resultsState.showFixes = el.value === "1"; render(); });
+  }
+
+  // ---------------------------------------------------------------- Mistakes
+  function failures() {
+    const kinds = { tier_inversion: "Ranked a weaker candidate above a stronger one", largest_name_cue_gap: "Biggest jump from a name change", largest_career_gap_gap: "Biggest jump from a career break", largest_institution_gap: "Biggest jump from a university change", shortlist_flip: "Shortlist changed" };
+    const mainMethods = ["keyword", "embedding"];
+    const key = S.failure_cases.filter(c => (c.kind === "tier_inversion" && mainMethods.includes(c.method)) || (c.method === "embedding" && (c.kind === "largest_name_cue_gap" || c.kind === "largest_career_gap_gap")));
+    const rest = S.failure_cases.filter(c => !key.includes(c));
+    const card = c => `<article class="case"><div class="head"><span class="pill">${esc(c.case_id)}</span><h3>${esc(kinds[c.kind] || c.kind)}</h3></div>
+      <p class="small muted">${esc(condLabel(c.method, c.mitigation))} · ${esc(jobById[c.job_id].title)}</p><p>${esc(c.explanation || "")}</p>
+      ${c.a ? `<button class="link" data-a="${esc(c.a.sample_id)}" data-b="${esc(c.b.sample_id)}">See this pair side by side</button>` : ""}</article>`;
+    return `<section class="page">
+      <div class="block"><h2>Mistakes the methods made</h2>
+        <p>These were picked by fixed rules, not by hand, so they are not chosen to tell a particular story. The key examples come first.</p></div>
+      <div class="block">${key.map(card).join("")}</div>
+      <details><summary>Show all ${rest.length} other cases (mostly shortlist changes)</summary><div>${rest.map(card).join("")}</div></details>
+    </section>`;
+  }
+  function bindFailures() {
+    app.querySelectorAll("button.link").forEach(btn => btn.addEventListener("click", () => {
+      const a = D.samples[btn.dataset.a], b = D.samples[btn.dataset.b];
+      const attr = b[3] === "career_gap" ? "career_gap" : b[3] === "formatting" ? "formatting" : b[3] === "institution" ? "institution" : "name_cue";
+      Object.assign(pairState, { job: a[1], base: a[0], attr });
+      if (attr === "name_cue") { pairState.ga = a[4]; pairState.gb = b[4]; }
+      location.hash = "pairs";
+    }));
+  }
+
+  // ---------------------------------------------------------------- How it was done
+  function method() {
+    const t = D.transformations, m = D.models;
+    return `<section class="page">
+      <div class="block"><h2>How it was done</h2>
+        <p>${S.benchmark.n_base_resumes} made-up resumes were written for ${D.jobs.length} made-up Singapore jobs: 2 jobs each for data analysts, software engineers and marketing analysts. For every job there are exactly 2 strong, 2 good, 2 borderline and 2 weak candidates. A program then made ${S.benchmark.n_samples / S.benchmark.n_base_resumes / 2} copies of each resume and checked every pair with a fingerprint, so the only difference is the one being tested. Anyone can re-run it and get exactly the same numbers.</p></div>
+      <details><summary>The jobs and what each one looks for</summary><div><div class="scroll"><table><thead><tr><th>Job</th><th>Skills and their weight</th></tr></thead><tbody>
+        ${D.jobs.map(j => `<tr><td>${esc(j.title)}<br><span class="small muted">${esc(j.employer)} (made up)</span></td><td>${j.competencies.map(c => esc(c.name) + " " + Math.round(c.weight * 100) + "%").join("; ")}</td></tr>`).join("")}
+      </tbody></table></div></div></details>
+      <details><summary>Exactly what changes in each copy</summary><div><div class="scroll"><table><tbody>
+        <tr><td>Name</td><td>Six names per resume: a female and a male name in Chinese, Malay and Indian naming styles. Emails use example.com, a domain reserved for examples.</td></tr>
+        <tr><td>Career break</td><td>A ${t.career_gap.length_months}-month "${esc(t.career_gap.label)}" line before the latest job. Older dates move back so total experience stays the same, which also moves the graduation year back by one year.</td></tr>
+        <tr><td>University</td><td>${esc(t.institution.higher_ranked.join(" or "))} against ${esc(t.institution.comparison.join(" or "))}. Same degree, grade and dates.</td></tr>
+        <tr><td>Section order</td><td>Skills moved above experience, and "${esc(t.formatting.alternative.bullet)}" bullets instead of "${esc(t.formatting.standard.bullet)}". Same words.</td></tr>
+      </tbody></table></div></div></details>
+      <details><summary>How each method scores</summary><div>
+        <p><strong>Keyword counting.</strong> For each skill on the job's list: 1 point if only listed, 2 if it appears in one work bullet, 3 if in two or more. Weighted by importance and scaled to 100.</p>
+        <p><strong>Meaning-matching.</strong> Uses the ${esc(m.embedding.model)} model on a normal computer. It can read about 250 words at a time, so long resumes are read in pieces and combined. The section-by-section version gives most weight to experience and skills.</p>
+        <p><strong>AI marker.</strong> ${esc(m.llm_rubric.model)}, ${m.llm_rubric.repetitions} runs per resume, must quote the resume for every skill it credits. ${llmStatus === "not_run" ? "Built and tested; running it is planned as future work." : ""}</p>
+      </div></details>
+      <details><summary>How the numbers are worked out</summary><div>
+        <p class="small">Each resume counts once, even though it appears in many pairs. The ranges come from re-sampling the ${S.benchmark.n_base_resumes} resumes ${S.settings.bootstrap_resamples.toLocaleString()} times. Whether a gap leans one way consistently is tested with a Wilcoxon signed-rank test, adjusted for the number of tests (Holm). A change above ${S.settings.material_gap_points} points is counted as large enough to matter. The shortlist is the top ${S.settings.shortlist_k} of 8 candidates.</p>
+        <pre class="cmd">pip install -r requirements.txt
+python scripts/download_model.py
+python scripts/build_dataset.py
+python scripts/run_experiment.py
+python scripts/analyse_results.py
+python scripts/build_site.py</pre>
+      </div></details>
+      <details><summary>Limits</summary><div>
+        <p class="small">Small and made up. The strong-to-weak order and the keyword lists were written by the same person. Names stand for gender and background only as a reader might see them. One meaning-matching model was tested. The AI marker was not run in this version and is planned as future work. The main design choices were confirmed by the applicant; the resumes and job rules are still being reviewed.</p>
+      </div></details>
+    </section>`;
+  }
+
+  // ---------------------------------------------------------------- router
+  const PAGES = { overview: [overview], pairs: [pairs, bindPairs], results: [results, bindResults], failures: [failures, bindFailures], method: [method] };
+  function current() { const h = location.hash.replace("#", ""); return PAGES[h] ? h : "overview"; }
+  function render() {
+    const page = current();
+    app.innerHTML = PAGES[page][0]();
+    if (PAGES[page][1]) PAGES[page][1]();
+    document.querySelectorAll("nav.tabs a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + page ? "page" : "false"));
+  }
+  initPairState();
+  window.addEventListener("hashchange", () => { render(); window.scrollTo(0, 0); });
+  render();
+})();
+</script>

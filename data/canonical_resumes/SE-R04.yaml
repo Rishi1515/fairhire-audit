@@ -1,0 +1,53 @@
+resume_id: SE-R04
+family: software_engineer
+intended_tier:
+  SE-01: borderline
+  SE-02: borderline
+generation_version: '1.0'
+status: draft
+design_notes: 'Borderline for both: career changer with 18 months of junior web work in Django plus a bootcamp and one tested
+  personal project. Some backend and some frontend, neither at depth.'
+summary: Junior web developer who moved into software after four years in logistics. Builds small Django web apps for local
+  businesses.
+experience:
+- employer: Simei Digital Agency
+  title: Junior Web Developer
+  location: Singapore
+  start: 2025-03
+  end: null
+  bullets:
+  - Build small websites and booking tools for local businesses using Django and Bootstrap.
+  - Add simple REST endpoints for mobile-friendly booking forms.
+  - Fix layout bugs on mobile screens using CSS and JavaScript.
+- employer: Pioneer Freight Forwarding
+  title: Logistics Coordinator
+  location: Singapore
+  start: 2021-01
+  end: 2024-06
+  bullets:
+  - Coordinated bookings and documents for about 40 shipments a week.
+  - Built Excel macros that sped up the weekly shipment report.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Science
+  subject: Logistics and Supply Chain Management
+  start: 2016-07
+  end: 2020-06
+  grade: GPA 3.5 / 5.0
+skills:
+  Languages:
+  - Python
+  - JavaScript
+  - HTML
+  - CSS
+  Frameworks:
+  - Django
+  - Bootstrap
+  Tools:
+  - PostgreSQL (basic)
+  - Git
+certifications:
+- Full Stack Web Development Bootcamp, 24-week programme (2024)
+projects:
+- name: Hawker queue tracker
+  description: Django and PostgreSQL web app that shows queue times from user reports, with pytest tests.

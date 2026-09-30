@@ -1,0 +1,52 @@
+resume_id: MA-R01
+family: marketing_analyst
+intended_tier:
+  MA-01: strong
+  MA-02: borderline
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for MA-01: paid media across three platforms with budget scale, tracking fixes, holdout tests, ROAS-based
+  budget moves and dashboards. Borderline for MA-02: data tools and communication only.'
+summary: Performance marketing analyst with five years of experience in online retail across Singapore and Malaysia.
+experience:
+- employer: Lavender Street Apparel
+  title: Performance Marketing Analyst
+  location: Singapore
+  start: 2023-01
+  end: null
+  bullets:
+  - Analyse Google Ads, Meta Ads and TikTok Ads campaigns with a monthly budget of about SGD 250,000.
+  - Built GA4 and UTM tracking checks and fixed conversion tracking gaps that had under-reported sales by about 15%.
+  - Designed creative tests and a geographic holdout test showing paid social drove about 20% more orders than last-click
+    reports suggested.
+  - Recommend weekly budget shifts based on ROAS and CPA; moved 18% of spend to better-performing campaigns in 2025.
+  - Maintain Looker Studio dashboards for channel managers and present monthly results to the head of marketing.
+- employer: Rochor Electronics Online
+  title: Digital Marketing Analyst
+  location: Singapore
+  start: 2021-07
+  end: 2022-12
+  bullets:
+  - Pulled campaign and order data with BigQuery SQL and combined it in Google Sheets.
+  - Reported weekly conversion funnel performance from Google Analytics.
+  - Ran A/B tests on landing pages with the web team.
+education:
+- institution: Nanyang Technological University
+  qualification: Bachelor of Business
+  subject: Marketing
+  start: 2017-08
+  end: 2021-06
+  grade: GPA 3.9 / 5.0
+  coursework:
+  - Marketing Analytics
+  - Consumer Behaviour
+skills:
+  Platforms:
+  - Google Ads
+  - Meta Ads
+  - TikTok Ads
+  - GA4
+  Data:
+  - SQL (BigQuery)
+  - Google Sheets
+  - Looker Studio

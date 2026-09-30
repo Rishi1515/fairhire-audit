@@ -1,0 +1,44 @@
+resume_id: MA-R07
+family: marketing_analyst
+intended_tier:
+  MA-01: borderline
+  MA-02: borderline
+generation_version: '1.0'
+status: draft
+design_notes: 'Borderline for both: marketing coordinator with small ad boosts, a Mailchimp newsletter, sign-up tracking and
+  feedback summaries. Touches each job lightly, without analysis depth.'
+summary: Marketing coordinator with five years of experience in events and community marketing.
+experience:
+- employer: Marine Parade Education Centre
+  title: Marketing Coordinator
+  location: Singapore
+  start: 2023-02
+  end: null
+  bullets:
+  - Organise open days and school roadshows, and track sign-ups in Excel.
+  - Run small Facebook and Instagram ad boosts for events and report reach and sign-ups.
+  - Send a monthly parent newsletter in Mailchimp.
+  - Collect feedback forms after events and summarise them for the centre manager.
+- employer: Bedok Community Arts
+  title: Events Executive
+  location: Singapore
+  start: 2021-06
+  end: 2023-01
+  bullets:
+  - Coordinated community events with up to 500 attendees.
+  - Posted event updates on social media.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Arts
+  subject: English Language
+  start: 2017-08
+  end: 2021-05
+  grade: GPA 3.7 / 5.0
+skills:
+  Tools:
+  - Excel
+  - Mailchimp
+  - Canva
+  Other:
+  - Event planning
+  - Social media

@@ -1,0 +1,57 @@
+resume_id: DA-R05
+family: data_analyst
+intended_tier:
+  DA-01: good
+  DA-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for DA-02: product metrics, many A/B tests with sample size planning, SQL window functions, Python,
+  and a measured result. Good for DA-01: solid SQL and dashboards but no forecasting or operations reporting. Studied at a
+  less internationally ranked university.'
+summary: Product analyst with five years of experience in consumer apps and online retail. Designs and analyses A/B tests
+  and builds the product metrics that teams use to decide what to build.
+experience:
+- employer: Lalang Rides
+  title: Product Analyst
+  location: Singapore
+  start: 2023-08
+  end: null
+  bullets:
+  - Defined activation and 30-day retention metrics for the driver app and built the weekly product metrics review in Looker.
+  - Designed and analysed 14 A/B tests on onboarding and pricing screens, including sample size planning and a written note
+    on what each result could not show.
+  - Wrote BigQuery SQL on event tables, using window functions to build funnel and cohort datasets.
+  - Analysed onboarding funnel drop-off in Python (pandas) and recommended removing two steps; completion rose from 61% to
+    70% in the follow-up test.
+  - Present monthly findings to product managers and designers.
+- employer: Serangoon Online Books
+  title: Junior Business Analyst
+  location: Singapore
+  start: 2021-08
+  end: 2023-07
+  bullets:
+  - Built weekly sales reports in Google Sheets and Looker Studio for the marketing team.
+  - Wrote MySQL queries on order and customer data.
+  - Checked daily order data for duplicates before reports were sent.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Science
+  subject: Business Analytics
+  start: 2017-07
+  end: 2021-06
+  grade: GPA 4.0 / 5.0
+  coursework:
+  - Statistics
+  - Database Systems
+  - Experimental Design
+skills:
+  Data:
+  - SQL (BigQuery, MySQL)
+  - Python (pandas, SciPy)
+  - Google Sheets
+  Visualisation:
+  - Looker
+  - Looker Studio
+  Methods:
+  - A/B testing
+  - Funnel and cohort analysis

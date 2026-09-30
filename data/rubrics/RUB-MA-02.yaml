@@ -1,0 +1,120 @@
+rubric_id: RUB-MA-02
+job_id: MA-02
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: customer_segmentation
+  name: Customer segmentation
+  importance: essential
+  weight: 0.2
+  aliases:
+  - segmentation
+  - RFM
+  - clustering
+  - customer segments
+  - personas
+  - k-means
+  observable_evidence:
+  - Built customer segments from behaviour or value data.
+  - Segments were used for campaigns or decisions.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: retention_analysis
+  name: Retention and lifetime value
+  importance: essential
+  weight: 0.2
+  aliases:
+  - retention
+  - churn
+  - cohort
+  - customer lifetime value
+  - CLV
+  - LTV
+  observable_evidence:
+  - Analysed churn, retention or lifetime value by cohort or segment.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: crm_platforms
+  name: CRM and campaign platforms
+  importance: essential
+  weight: 0.15
+  aliases:
+  - Salesforce Marketing Cloud
+  - HubSpot
+  - Braze
+  - Klaviyo
+  - Mailchimp
+  - CRM
+  - email campaign
+  observable_evidence:
+  - Planned, ran or measured campaigns in a CRM or email platform.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: data_tools
+  name: SQL, spreadsheets or Python
+  importance: essential
+  weight: 0.2
+  aliases:
+  - SQL
+  - PostgreSQL
+  - MySQL
+  - BigQuery
+  - SQL Server
+  - T-SQL
+  - Snowflake
+  - Excel
+  - Google Sheets
+  - Python
+  - R
+  observable_evidence:
+  - Used SQL, spreadsheets or Python to prepare and analyse customer data.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: survey_research
+  name: Survey and customer research
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - survey
+  - NPS
+  - Qualtrics
+  - SurveyMonkey
+  - customer interviews
+  - focus group
+  observable_evidence:
+  - Designed or analysed customer surveys or interviews.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: insight_storytelling
+  name: Insight storytelling
+  importance: essential
+  weight: 0.15
+  aliases:
+  - presented
+  - insights
+  - recommendations
+  - storytelling
+  - stakeholders
+  observable_evidence:
+  - Presented customer insights with recommendations.
+  - Insight led to a change in a campaign or offer.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+  - Generic claims such as 'strong storyteller' with no example.
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

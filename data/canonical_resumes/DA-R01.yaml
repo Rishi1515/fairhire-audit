@@ -1,0 +1,50 @@
+resume_id: DA-R01
+family: data_analyst
+intended_tier: {DA-01: strong, DA-02: good}
+generation_version: "1.0"
+status: draft
+design_notes: >
+  Strong for DA-01: five years of retail and logistics analysis with applied SQL, dashboards used by named
+  audiences, forecasting with a measured result, data checks, and regular presentations to managers.
+  Good rather than strong for DA-02: has SQL, Python and one route test, but no product funnel or retention
+  metrics and no formal experiment design. Placed at a less internationally ranked university on purpose, so
+  that tier and institution are not confounded in the base set.
+summary: >
+  Data analyst with five years of experience in retail and logistics reporting. Builds SQL data sets and
+  Power BI dashboards used by operations managers, and explains forecast gaps in plain language.
+experience:
+  - employer: Sembawang Mart
+    title: Data Analyst
+    location: Singapore
+    start: "2023-03"
+    end: null
+    bullets:
+      - Built and maintain 12 Power BI dashboards on store sales, stock availability and waste, used weekly by 40 store and category managers.
+      - Wrote BigQuery SQL joining sales, inventory and supplier tables to create a daily stock-out report, saving about 6 hours of manual reporting a week.
+      - Analyse weekly sales against forecast and present the main causes of variances above 10% at the monthly supply chain review.
+      - Built a seasonal trend and regression model in Python to adjust promotion forecasts, lowering average forecast error for promoted items from 24% to 17%.
+      - Set up automated validation checks that flag duplicate and missing transaction records before dashboards refresh.
+  - employer: Straits Parcel Logistics
+    title: Junior Data Analyst
+    location: Singapore
+    start: "2021-07"
+    end: "2023-02"
+    bullets:
+      - Produced delivery performance reports for 5 regional hubs in Excel using pivot tables and XLOOKUP.
+      - Wrote PostgreSQL queries to track late deliveries by route and driver shift.
+      - Reconciled delivery records between the courier app and the billing system, resolving about 300 mismatches a month.
+      - Ran a two-week trial of a new route-planning rule and summarised the change in on-time delivery for hub managers.
+education:
+  - institution: Singapore Institute of Technology
+    qualification: Bachelor of Science (Honours)
+    subject: Applied Statistics
+    start: "2017-09"
+    end: "2021-06"
+    grade: GPA 4.1 / 5.0
+    coursework: [Regression Analysis, Time Series Forecasting, Database Systems]
+skills:
+  Data: [SQL (BigQuery, PostgreSQL), Python (pandas, statsmodels), Excel]
+  Visualisation: [Power BI, Tableau]
+  Methods: [Forecasting, Regression, Variance analysis]
+certifications:
+  - "Microsoft Certified: Power BI Data Analyst Associate"

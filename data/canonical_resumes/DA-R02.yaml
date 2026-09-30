@@ -1,0 +1,44 @@
+resume_id: DA-R02
+family: data_analyst
+intended_tier: {DA-01: good, DA-02: borderline}
+generation_version: "1.0"
+status: draft
+design_notes: >
+  Good for DA-01: solid spreadsheet and Power BI work with named users, some data cleaning and communication,
+  but SQL is basic (single-table extracts) and there is no forecasting or statistical method beyond
+  month-on-month comparison. Borderline for DA-02: no experiments, no product metrics and no Python.
+  Placed at a highly ranked university, so a good-but-not-strong resume carries the prestige cue in the base set.
+summary: >
+  Business analyst with four years of experience in operations reporting for banking and distribution.
+  Strong in Excel and Power BI, with growing SQL skills.
+experience:
+  - employer: Marina Harbour Bank
+    title: Operations Reporting Analyst
+    location: Singapore
+    start: "2024-01"
+    end: null
+    bullets:
+      - Maintain weekly and monthly operations reports in Excel for the retail banking service team, using pivot tables, XLOOKUP and Power Query.
+      - Built 4 Power BI dashboards tracking branch queue times and service requests, used by 15 branch managers.
+      - Write SQL Server queries to extract service request data, mostly single-table filters and groupings.
+      - Explain month-on-month changes in service levels to the operations manager, including a staffing recommendation for two branches.
+  - employer: Clementi Health Supplies
+    title: Business Operations Executive
+    location: Singapore
+    start: "2022-07"
+    end: "2023-12"
+    bullets:
+      - Prepared weekly sales and inventory summaries in Excel for the sales director.
+      - Cleaned the product master list, removing about 1,200 duplicate item codes.
+      - Worked with the warehouse team to investigate stock count differences.
+education:
+  - institution: National University of Singapore
+    qualification: Bachelor of Business Administration
+    subject: Operations Management, minor in Business Analytics
+    start: "2018-08"
+    end: "2022-06"
+    grade: GPA 3.8 / 5.0
+    coursework: [Business Analytics, Statistics for Business, Database Management]
+skills:
+  Tools: [Excel (advanced), Power Query, Power BI, SQL Server (basic)]
+  Methods: [Descriptive statistics, Variance analysis]

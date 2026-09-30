@@ -1,0 +1,125 @@
+rubric_id: RUB-SE-02
+job_id: SE-02
+version: 0.1-draft
+status: draft
+scale:
+- level: 0
+  meaning: No evidence in the resume.
+- level: 1
+  meaning: 'Mentioned only: listed as a skill, course or tool with no described use.'
+- level: 2
+  meaning: 'Applied: used in a described task, project or role.'
+- level: 3
+  meaning: 'Applied with depth: used repeatedly or at scale, with a stated outcome, scope or ownership.'
+competencies:
+- competency_id: javascript_typescript
+  name: JavaScript and TypeScript
+  importance: essential
+  weight: 0.2
+  aliases:
+  - JavaScript
+  - TypeScript
+  - ES6
+  observable_evidence:
+  - Built production features in JavaScript or TypeScript.
+  - Introduced or maintained typed code.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: react
+  name: React
+  importance: essential
+  weight: 0.2
+  aliases:
+  - React
+  - Next.js
+  - React Hooks
+  - Redux
+  observable_evidence:
+  - Built or maintained React applications in production.
+  - Designed reusable components.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: accessibility_responsive
+  name: Accessibility and responsive design
+  importance: essential
+  weight: 0.15
+  aliases:
+  - accessibility
+  - WCAG
+  - ARIA
+  - a11y
+  - responsive
+  - screen reader
+  observable_evidence:
+  - Made interfaces meet an accessibility standard or fixed accessibility issues.
+  - Built layouts that work across screen sizes.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: frontend_testing
+  name: Frontend testing
+  importance: essential
+  weight: 0.15
+  aliases:
+  - Jest
+  - React Testing Library
+  - Cypress
+  - Playwright
+  - Vitest
+  - end-to-end test
+  observable_evidence:
+  - Wrote component or end-to-end tests.
+  - Set up or improved a frontend test suite.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: api_integration
+  name: API integration and state
+  importance: desirable
+  weight: 0.15
+  aliases:
+  - REST
+  - GraphQL
+  - Apollo
+  - React Query
+  - Redux
+  - state management
+  observable_evidence:
+  - Connected interfaces to REST or GraphQL APIs.
+  - Managed client-side data or state.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: web_performance
+  name: Web performance
+  importance: desirable
+  weight: 0.1
+  aliases:
+  - Lighthouse
+  - Core Web Vitals
+  - bundle size
+  - lazy loading
+  - code splitting
+  - performance
+  observable_evidence:
+  - Measured and improved load time or bundle size.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+- competency_id: design_collaboration
+  name: Design collaboration
+  importance: desirable
+  weight: 0.05
+  aliases:
+  - Figma
+  - design system
+  - Storybook
+  - UX
+  observable_evidence:
+  - Worked with designers or contributed to a design system.
+  does_not_count:
+  - Tool or skill appears only in the skills list (caps the competency at level 1).
+irrelevant_signals:
+- Candidate name and email address
+- Gender, pronouns, or apparent ethnicity or nationality
+- Age or graduation year
+- Name or ranking of the university, beyond the qualification and subject themselves
+- A career break, when total relevant experience is unchanged
+- Font, bullet style and section order
+- Hobbies, photographs and personal details

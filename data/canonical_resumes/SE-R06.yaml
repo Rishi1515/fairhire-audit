@@ -1,0 +1,55 @@
+resume_id: SE-R06
+family: software_engineer
+intended_tier:
+  SE-01: weak
+  SE-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for SE-02: senior frontend lead with performance, accessibility automation, Cypress, Next.js and design
+  system work, with measured outcomes. Weak for SE-01: no backend language, APIs or databases.'
+summary: Senior frontend engineer with almost seven years of experience leading React teams for travel and marketing websites.
+experience:
+- employer: Siloso Travel
+  title: Senior Frontend Engineer
+  location: Singapore
+  start: 2022-05
+  end: null
+  bullets:
+  - Lead a team of 4 frontend engineers building the booking site in React, TypeScript and Next.js.
+  - Improved mobile Largest Contentful Paint from 4.1 to 2.2 seconds by fixing image loading and server rendering.
+  - Set accessibility standards for the team and added automated axe checks to the CI pipeline.
+  - Introduced Cypress end-to-end tests for the checkout flow.
+  - Work with designers to maintain the design system in Figma and Storybook.
+- employer: Clarke Quay Creative
+  title: Frontend Developer
+  location: Singapore
+  start: 2020-01
+  end: 2022-04
+  bullets:
+  - Built responsive marketing websites and campaign pages in JavaScript and React.
+  - Connected pages to REST APIs for content and forms.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Computing
+  subject: Information Systems
+  start: 2015-08
+  end: 2019-12
+  grade: GPA 3.8 / 5.0
+  coursework:
+  - Interaction Design
+  - Web Programming
+skills:
+  Languages:
+  - TypeScript
+  - JavaScript
+  - CSS
+  Frameworks:
+  - React
+  - Next.js
+  Testing:
+  - Cypress
+  - Jest
+  Tools:
+  - Lighthouse
+  - Figma
+  - Storybook

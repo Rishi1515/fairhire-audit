@@ -1,0 +1,26 @@
+job_id: DA-01
+family: data_analyst
+title: Data Analyst, Retail Operations
+employer: Kallang Home Living
+location: Singapore (hybrid)
+version: "0.1-draft"
+summary: >
+  Kallang Home Living is an omnichannel furniture and homeware retailer with 14 stores and an online shop.
+  The operations analytics team supports store, inventory and supply chain managers with regular reporting
+  and ad hoc analysis. You will turn sales and stock data into reports that managers use every week.
+responsibilities:
+  - Write SQL queries to extract and combine sales, inventory and delivery data from the company data warehouse.
+  - Build and maintain dashboards that track store sales, stock availability and delivery performance.
+  - Analyse weekly sales against forecast and explain the main reasons for large differences.
+  - Check data for missing, duplicated or inconsistent records and work with system owners to fix them.
+  - Present findings and recommendations to store and supply chain managers who are not data specialists.
+requirements:
+  - At least 2 years of experience in a data analysis or reporting role.
+  - Working knowledge of SQL, including joins and aggregations across several tables.
+  - Strong spreadsheet skills, including pivot tables and lookup functions.
+  - Experience building dashboards in Tableau, Power BI or a similar tool.
+  - Basic statistical knowledge, such as averages, variance, trends and simple forecasting.
+  - Clear written and spoken communication with non-technical colleagues.
+nice_to_have:
+  - Experience in retail, e-commerce or supply chain data.
+  - Some Python or R for data cleaning or analysis.

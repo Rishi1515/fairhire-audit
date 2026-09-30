@@ -1,0 +1,61 @@
+resume_id: SE-R01
+family: software_engineer
+intended_tier:
+  SE-01: strong
+  SE-02: borderline
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for SE-01: five years of Python backend work covering APIs, schema design, testing, CI/CD, on-call and
+  code review, with measured outcomes. Borderline for SE-02: only Django templates and some JavaScript. Studied at a less
+  internationally ranked university.'
+summary: Backend software engineer with five years of experience building Python services for payments and logistics.
+experience:
+- employer: Tanjong Rhu Payments
+  title: Software Engineer
+  location: Singapore
+  start: 2023-01
+  end: null
+  bullets:
+  - Design and build Python (FastAPI) services that handle settlement for about 9,000 merchants.
+  - Designed versioned REST APIs used by the mobile and partner teams, with input validation and clear error codes.
+  - Modelled PostgreSQL schemas and added indexes that cut the slowest report query from 40 seconds to 2 seconds.
+  - Write unit and integration tests with pytest; raised test coverage of the settlement service from 55% to 85%.
+  - Deploy with Docker and GitHub Actions to AWS ECS, and take part in on-call using Grafana and Prometheus alerts.
+  - Review code for 4 engineers and write design documents for new services.
+- employer: Ang Mo Kio Logistics Tech
+  title: Software Engineer
+  location: Singapore
+  start: 2021-07
+  end: 2022-12
+  bullets:
+  - Built Django REST APIs for warehouse stock tracking.
+  - Wrote MySQL migrations and pytest tests for new features.
+  - Built simple internal admin pages with Django templates and some JavaScript.
+education:
+- institution: Singapore Institute of Technology
+  qualification: Bachelor of Engineering (Honours)
+  subject: Software Engineering
+  start: 2017-09
+  end: 2021-06
+  grade: GPA 4.1 / 5.0
+  coursework:
+  - Distributed Systems
+  - Database Systems
+  - Software Testing
+skills:
+  Languages:
+  - Python
+  - SQL
+  - JavaScript (basic)
+  Frameworks:
+  - FastAPI
+  - Django
+  Infrastructure:
+  - PostgreSQL
+  - MySQL
+  - Docker
+  - AWS
+  - GitHub Actions
+  - Grafana
+  Testing:
+  - pytest

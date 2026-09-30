@@ -1,0 +1,51 @@
+resume_id: MA-R04
+family: marketing_analyst
+intended_tier:
+  MA-01: weak
+  MA-02: strong
+generation_version: '1.0'
+status: draft
+design_notes: 'Strong for MA-02: clustering segments, churn and lifetime value modelling, NPS surveys, Salesforce Marketing
+  Cloud measurement and insight reports that changed decisions. Weak for MA-01: no paid media, attribution or campaign tests.
+  Studied at a less internationally ranked university.'
+summary: Customer insights analyst with six years of experience in telecoms and market research.
+experience:
+- employer: Kranji Mobile
+  title: Customer Insights Analyst
+  location: Singapore
+  start: 2022-04
+  end: null
+  bullets:
+  - Built customer segments with k-means clustering in Python on usage and billing data for 1.1 million subscribers.
+  - Analysed churn drivers by cohort and built a customer lifetime value model used to set retention offer budgets.
+  - Design quarterly NPS surveys in Qualtrics and link the results to usage data.
+  - Present insight reports with recommendations to marketing and customer experience teams; two recommendations changed the
+    retention offer structure in 2024.
+  - Work with the CRM team to measure email campaigns sent through Salesforce Marketing Cloud.
+- employer: Newton Research Partners
+  title: Market Research Executive
+  location: Singapore
+  start: 2020-07
+  end: 2022-03
+  bullets:
+  - Ran surveys and focus groups for consumer brands and wrote summary reports.
+  - Prepared survey data tables in SPSS and Excel.
+education:
+- institution: Singapore University of Social Sciences
+  qualification: Bachelor of Science
+  subject: Business Analytics
+  start: 2016-07
+  end: 2020-06
+  grade: GPA 4.0 / 5.0
+  coursework:
+  - Data Mining
+  - Marketing Research
+skills:
+  Data:
+  - Python (pandas, scikit-learn)
+  - SQL
+  - Excel
+  - SPSS
+  Platforms:
+  - Qualtrics
+  - Salesforce Marketing Cloud

@@ -1,0 +1,26 @@
+job_id: DA-02
+family: data_analyst
+title: Product Data Analyst
+employer: Tembusu Pay
+location: Singapore
+version: "0.1-draft"
+summary: >
+  Tembusu Pay runs a mobile wallet used for bill payments and small merchant transactions. The product
+  analytics team helps product managers decide what to build by measuring how customers use the app and by
+  running experiments on new features.
+responsibilities:
+  - Define and track product metrics such as activation, conversion through key flows and monthly retention.
+  - Design, monitor and analyse A/B tests for new features, and state clearly what the result does and does not show.
+  - Query event and transaction data with SQL and analyse it in Python or a similar tool.
+  - Build simple dashboards that product teams check on their own.
+  - Write short analysis notes and present recommendations to product managers and designers.
+requirements:
+  - At least 2 years of experience in product, marketing or business analytics.
+  - Strong SQL, including window functions and working with event data.
+  - Practical understanding of experiment design, sample size and statistical significance.
+  - Experience defining or analysing funnel, cohort or retention metrics.
+  - Ability to explain results and uncertainty to non-technical colleagues.
+nice_to_have:
+  - Python (pandas) or R for analysis.
+  - Experience with Tableau, Looker or a similar dashboard tool.
+  - Experience in fintech or consumer apps.

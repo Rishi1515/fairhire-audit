@@ -1,0 +1,2374 @@
+{
+ "summary_version": "1",
+ "run": {
+  "run_id": "run-1.0.0",
+  "results_schema_version": "1",
+  "package_version": "0.1.0",
+  "code_version": "no-git:src-sha256:4517d80d19e19e0a",
+  "benchmark_version": "1.0.0",
+  "variants_sha256": "40d518c174a74410661e328f98b759767f9852bfd149c32f512156b86dc3aae5",
+  "config_sha256": "7e26ca0f16d7c5294bcbfc3c79ccae8619cbfe3c19119dbda84698b57a221155",
+  "timestamp_utc": "2026-09-30T04:12:57Z",
+  "python": "3.11.15",
+  "models": {
+   "keyword": {
+    "status": "approved",
+    "match": "rubric_aliases_only",
+    "levels": "skills/summary/education only = 1, one experience or project line = 2, two or more = 3"
+   },
+   "embedding": {
+    "status": "approved",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "format": "onnx",
+    "source_repo": "https://github.com/clems4ever/all-minilm-l6-v2-go",
+    "source_commit": "98aaab590a822d60ed359f7f8cb726e40daae4f4",
+    "sha256": {
+     "model.onnx": "994a58868f7abacacbf2192aa0aae8f56da8c4505dbde2740c861b24426ede6b",
+     "tokenizer.json": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+    },
+    "similarity": "cosine",
+    "sectioned_weights": {
+     "header": 0.05,
+     "summary": 0.1,
+     "experience": 0.5,
+     "skills": 0.25,
+     "education": 0.1
+    }
+   },
+   "llm_rubric": {
+    "status": "deferred",
+    "provider": "anthropic",
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 1.0,
+    "repetitions": 5,
+    "max_output_tokens": 1200,
+    "strict_evidence": false,
+    "price_per_mtok_input": 1.0,
+    "price_per_mtok_output": 5.0,
+    "cache_dir": "results/llm_cache"
+   }
+  },
+  "llm_rows": 0,
+  "llm_status": "not_run",
+  "demo": false
+ },
+ "benchmark": {
+  "benchmark_version": "1.0.0",
+  "generation_seed": 20260929,
+  "n_base_resumes": 24,
+  "n_pairs": 864,
+  "n_samples": 480,
+  "pairs_by_type": {
+   "career_gap": 48,
+   "formatting": 48,
+   "institution": 48,
+   "name_cue": 720
+  },
+  "pairs_sha256": "8c63594798a4f3f2f0eed2b77086ee9e1c704fadeb0721fb2268d8075441c136",
+  "reference_name_group": {
+   "DA-R01": "chinese_female",
+   "DA-R02": "chinese_male",
+   "DA-R03": "malay_female",
+   "DA-R04": "malay_male",
+   "DA-R05": "indian_female",
+   "DA-R06": "indian_male",
+   "DA-R07": "chinese_female",
+   "DA-R08": "chinese_male",
+   "MA-R01": "malay_female",
+   "MA-R02": "malay_male",
+   "MA-R03": "indian_female",
+   "MA-R04": "indian_male",
+   "MA-R05": "chinese_female",
+   "MA-R06": "chinese_male",
+   "MA-R07": "malay_female",
+   "MA-R08": "malay_male",
+   "SE-R01": "indian_female",
+   "SE-R02": "indian_male",
+   "SE-R03": "chinese_female",
+   "SE-R04": "chinese_male",
+   "SE-R05": "malay_female",
+   "SE-R06": "malay_male",
+   "SE-R07": "indian_female",
+   "SE-R08": "indian_male"
+  },
+  "source_files_sha256": {
+   "canonical_resumes/DA-R01.yaml": "6e7272bd237ed93fce212dcc1693d8addffca5fba7c361023404923dc7aab259",
+   "canonical_resumes/DA-R02.yaml": "00d153308ec0b3335f27c95b50e828826d424cf04526fab9895b3807bdc29117",
+   "canonical_resumes/DA-R03.yaml": "cd5b1b59af0a7cdb60bc3591659300ca30471094cf53f6ddf1ca0da723938ae3",
+   "canonical_resumes/DA-R04.yaml": "2bc1b3c57175c0708aaf785151c04dfb148a3172171ea75c62c9291cce9d7cab",
+   "canonical_resumes/DA-R05.yaml": "b7d0973055244367456f30d7c7b0aa5d88d5030b5c4687180b94d84a6fe24037",
+   "canonical_resumes/DA-R06.yaml": "d31dbd2f04266e668ee829fc37ca09a49448e8ad4c0f5d33b3d3477d80c53974",
+   "canonical_resumes/DA-R07.yaml": "49a803eb1c935534405cec0b4788dbc3c06a953af217cf9f9603ac6a728e9c0a",
+   "canonical_resumes/DA-R08.yaml": "f8ddf875c20318d0dae955cc51a86ba8fa887f069ed3afcf94bb3d2a6e4980c1",
+   "canonical_resumes/MA-R01.yaml": "c146da1022a916471a4d17309bf2bfcc94d11fa49e3b6704617e62bfe2fef274",
+   "canonical_resumes/MA-R02.yaml": "46351b4744a5ef95918864a3c798c41c716a610fdd612c808db54117bd77d445",
+   "canonical_resumes/MA-R03.yaml": "988e7c8aa8afee78f45412d4064fecf0e6c2fd003400fa1d7cb9e795eb0a7159",
+   "canonical_resumes/MA-R04.yaml": "391719f8b17372b777c43d712776103be4d4d12dccc2c8be1be8813cb5c6b741",
+   "canonical_resumes/MA-R05.yaml": "1a300e06837f0670f15b966904c1fed107e7818fab93d0422fb6426bf8a333a9",
+   "canonical_resumes/MA-R06.yaml": "8b587758c23d7461e90ad6bf2a0a19b77b0e5a141e089eccd9d6a073c9e10f49",
+   "canonical_resumes/MA-R07.yaml": "0bb1457982644225920d6e4aff79a37ac7e9988b651cd6d6177175f634127876",
+   "canonical_resumes/MA-R08.yaml": "c6889299fa7df780f6694fdf233f540df21d625c38449ec688f63b518ef1092b",
+   "canonical_resumes/SE-R01.yaml": "bbce9d8eb5d8a8a80028f6e8abca13d3caa9d0e37b85a7b50327947b14e60d41",
+   "canonical_resumes/SE-R02.yaml": "b022e61d24a49d9298edb41201be06e6df7d1e44e0d1bf366898a5c840137790",
+   "canonical_resumes/SE-R03.yaml": "c83afdd8d0ae66898ea55b7e642be68f648c1ebab602d4d50168e1be0e51bf57",
+   "canonical_resumes/SE-R04.yaml": "8a60a86533547c3032c9661ab19746de5bbe4701f16065e900c702179643c48c",
+   "canonical_resumes/SE-R05.yaml": "9149315cc69cfeee1ef91da1f3e40becf072ecd3b3f1b5b8fe12a7c72fb695d4",
+   "canonical_resumes/SE-R06.yaml": "89795e1fec4b0f9316714fe5f2573d49d8489f2a8d00b292ac0579bfd38732ab",
+   "canonical_resumes/SE-R07.yaml": "1ca5e97a1ba5f0525bc00d04909adb83efc6ecb5b06065750e32183b47695009",
+   "canonical_resumes/SE-R08.yaml": "e8fca22a76963a71a128ad11c3897319ae59216a915fd1aa30f603da35bb6d20",
+   "config/experiment.yaml": "17fbce0091338018618a9b485015a47bce1a956fa50f75b11a7aeccdcca49def",
+   "jobs/DA-01.yaml": "513af6a614830f550bdb8184b5b2acd43125f59ec4933220c34bd94e807bf2e7",
+   "jobs/DA-02.yaml": "adfb38cca496b0ecf5bb98ac5ffda17221100170ccba3fb39fffda5316ef5e4d",
+   "jobs/MA-01.yaml": "be1979ed2f9b10e10ee655b2d6b61d9e6fff2d354b246c8e92048cda86092e39",
+   "jobs/MA-02.yaml": "8ccba7c2ccaabb3e289b9a099e85cc0758736364a23de39b46735281e430fc5a",
+   "jobs/SE-01.yaml": "a062677b8bd38359242bf2f340f4fa452aa8d1c4413ca48a6779a4999c588c0f",
+   "jobs/SE-02.yaml": "dc279d67542aa776c7e02b691dcb865d36190d14bed4a62287a715d5d7866acd",
+   "rubrics/RUB-DA-01.yaml": "666fdfcba8c9c4a8db2e7c414b78393d89ca10fdd57891bb930bd6e454a92686",
+   "rubrics/RUB-DA-02.yaml": "c0edf6ea6fa8e263f843aa5909b59fed42dbb000106b452a46e54461c585badb",
+   "rubrics/RUB-MA-01.yaml": "2513310bd6158355a620c9616a38459257339e46b37ef26d0baa90c957e2a1ba",
+   "rubrics/RUB-MA-02.yaml": "08abf1faff97dba7bb91a7355e02e0bc559c1cc415b25c76676160da81819630",
+   "rubrics/RUB-SE-01.yaml": "78ef205581c4915bff08aeeb575c5875c51c8697b00327d6badc94f099b0afe5",
+   "rubrics/RUB-SE-02.yaml": "142b4f5818e3b33c37a36b1ae452b171a7da71631bffe81a81dc7eaa9f1f32db"
+  },
+  "variants_sha256": "40d518c174a74410661e328f98b759767f9852bfd149c32f512156b86dc3aae5"
+ },
+ "settings": {
+  "shortlist_k": 4,
+  "material_gap_points": 2.0,
+  "alpha": 0.05,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 7
+ },
+ "definitions": {
+  "signed_gap": "Score of the changed version minus the score of the original version, for the same resume and job. Positive means the change raised the score.",
+  "abs_gap": "How far the score moved, ignoring direction.",
+  "name_spread": "For one resume and job, the highest score minus the lowest score across the six names.",
+  "share_material": "Share of resume-job rows where the score moved by more than the material threshold.",
+  "flip_rate": "Share of resume-job rows where the shortlist decision (top 4 of 8 candidates) changed because of the single changed field.",
+  "tier_accuracy": "For every two candidates in different intended tiers, the share where the stronger one scored higher (ties count as half).",
+  "spearman": "Rank correlation between scores and intended tier order, from -1 to 1.",
+  "p_holm": "Wilcoxon signed-rank p-value on one value per base resume, adjusted for the number of tests with the Holm method.",
+  "format_topk_jaccard": "Overlap between the top 4 candidates under standard and alternative formatting (1 means the same shortlist)."
+ },
+ "conditions": [
+  {
+   "method": "embedding",
+   "mitigation": "none"
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised"
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence"
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none"
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised"
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none"
+  }
+ ],
+ "headlines": [
+  {
+   "title": "Names changed the scores of one method",
+   "text": "When only the name changed, the meaning-matching method's score for the same resume moved by 4.3 points out of 100 on average (up to 9.2). That was enough to change who made the top 4 in 15% of cases. No gender or group was consistently favoured. The scores moved around rather than leaning one way."
+  },
+  {
+   "title": "Hiding names fixed the name problem only",
+   "text": "When names and emails were hidden before scoring, the name effect disappeared and the method got better at ranking stronger candidates above weaker ones (83% of the time before, 90% after). A career break still moved scores by 1.5 points on average, and changing the section order by 1.9."
+  },
+  {
+   "title": "Keyword counting never moved, but it can be fooled",
+   "text": "Keyword counting gave the same score to both versions in every pair. It ranked stronger candidates above weaker ones 96% of the time, against 83% for meaning-matching. Its word lists and the intended strong-to-weak order were written by the same person, which helps it. It still made mistakes. With keyword counting, MA-R08 (a weak candidate for job MA-02) scored 10.0 points higher than MA-R01 (a borderline candidate for job MA-02), so the weaker candidate was ranked above the stronger one. It gave the weaker candidate credit for CRM and campaign platforms because of the line \"Visit about 15 customers a week and record orders in the company CRM\"."
+  }
+ ],
+ "relevance": [
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.8263888888888888,
+   "tier_accuracy_low": 0.7638888888888888,
+   "tier_accuracy_high": 0.8888888888888888,
+   "spearman_mean": 0.7075275528876865,
+   "spearman_min": 0.34156502553198664,
+   "spearman_max": 0.9271050693011065,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 0.875,
+     "spearman": 0.7807200583588266
+    },
+    "DA-02": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7319250547113999
+    },
+    "MA-01": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7319250547113999
+    },
+    "MA-02": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7319250547113999
+    },
+    "SE-01": {
+     "tier_accuracy": 0.625,
+     "spearman": 0.34156502553198664
+    },
+    "SE-02": {
+     "tier_accuracy": 0.9583333333333334,
+     "spearman": 0.9271050693011065
+    }
+   }
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.8958333333333334,
+   "tier_accuracy_low": 0.8402777777777778,
+   "tier_accuracy_high": 0.9444444444444444,
+   "spearman_mean": 0.8213825613983488,
+   "spearman_min": 0.34156502553198664,
+   "spearman_max": 0.9759000729485332,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "DA-02": {
+     "tier_accuracy": 0.9583333333333334,
+     "spearman": 0.9271050693011065
+    },
+    "MA-01": {
+     "tier_accuracy": 0.875,
+     "spearman": 0.8295150620062534
+    },
+    "MA-02": {
+     "tier_accuracy": 0.9166666666666666,
+     "spearman": 0.8783100656536799
+    },
+    "SE-01": {
+     "tier_accuracy": 0.625,
+     "spearman": 0.34156502553198664
+    },
+    "SE-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    }
+   }
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.8541666666666666,
+   "tier_accuracy_low": 0.7916666666666666,
+   "tier_accuracy_high": 0.9097222222222222,
+   "spearman_mean": 0.7725875577509221,
+   "spearman_min": 0.4879500364742666,
+   "spearman_max": 0.9759000729485332,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 0.75,
+     "spearman": 0.5855400437691199
+    },
+    "DA-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "MA-01": {
+     "tier_accuracy": 0.875,
+     "spearman": 0.8295150620062534
+    },
+    "MA-02": {
+     "tier_accuracy": 0.6666666666666666,
+     "spearman": 0.4879500364742666
+    },
+    "SE-01": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7807200583588266
+    },
+    "SE-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    }
+   }
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.8888888888888888,
+   "tier_accuracy_low": 0.8333333333333334,
+   "tier_accuracy_high": 0.9375,
+   "spearman_mean": 0.8132500607904444,
+   "spearman_min": 0.5855400437691199,
+   "spearman_max": 0.9759000729485332,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "DA-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "MA-01": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7319250547113999
+    },
+    "MA-02": {
+     "tier_accuracy": 0.7916666666666666,
+     "spearman": 0.6831300510639733
+    },
+    "SE-01": {
+     "tier_accuracy": 0.75,
+     "spearman": 0.5855400437691199
+    },
+    "SE-02": {
+     "tier_accuracy": 0.9583333333333334,
+     "spearman": 0.9271050693011065
+    }
+   }
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.8888888888888888,
+   "tier_accuracy_low": 0.8333333333333334,
+   "tier_accuracy_high": 0.9375,
+   "spearman_mean": 0.8132500607904444,
+   "spearman_min": 0.5855400437691199,
+   "spearman_max": 0.9759000729485332,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "DA-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "MA-01": {
+     "tier_accuracy": 0.8333333333333334,
+     "spearman": 0.7319250547113999
+    },
+    "MA-02": {
+     "tier_accuracy": 0.7916666666666666,
+     "spearman": 0.6831300510639733
+    },
+    "SE-01": {
+     "tier_accuracy": 0.75,
+     "spearman": 0.5855400437691199
+    },
+    "SE-02": {
+     "tier_accuracy": 0.9583333333333334,
+     "spearman": 0.9271050693011065
+    }
+   }
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "reference": "intended_tier",
+   "n_jobs": 6,
+   "n_cross_tier_pairs": 144,
+   "tier_accuracy": 0.9583333333333334,
+   "tier_accuracy_low": 0.9236111111111112,
+   "tier_accuracy_high": 0.9861111111111112,
+   "spearman_mean": 0.9362368287555749,
+   "spearman_min": 0.8500000000000001,
+   "spearman_max": 0.9877295966495896,
+   "per_job": {
+    "DA-01": {
+     "tier_accuracy": 0.9583333333333334,
+     "spearman": 0.9271050693011065
+    },
+    "DA-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9877295966495896
+    },
+    "MA-01": {
+     "tier_accuracy": 0.875,
+     "spearman": 0.8500000000000001
+    },
+    "MA-02": {
+     "tier_accuracy": 0.9166666666666666,
+     "spearman": 0.8889566369846307
+    },
+    "SE-01": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9759000729485332
+    },
+    "SE-02": {
+     "tier_accuracy": 1.0,
+     "spearman": 0.9877295966495896
+    }
+   }
+  }
+ ],
+ "human_relevance": [],
+ "n_human_labelled": 0,
+ "gaps": [
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.04827472222222251,
+   "signed_low": -0.4338864862847226,
+   "signed_high": 0.31538976371527716,
+   "mean_abs_gap": 0.9571993333333335,
+   "abs_low": 0.7558245404513889,
+   "abs_high": 1.1626523151041674,
+   "max_abs_gap": 2.2972603333333317,
+   "share_material": 0.08333333333333333,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.9218088388442993,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.7051561145833332,
+   "signed_low": 0.18361811171874928,
+   "signed_high": 1.1993717489583329,
+   "mean_abs_gap": 1.599365072916667,
+   "abs_low": 1.3802401218750007,
+   "abs_high": 1.8138256869791667,
+   "max_abs_gap": 3.281774500000001,
+   "share_material": 0.3541666666666667,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.019441962242126465,
+   "p_holm": 0.2721874713897705
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.9220368541666666,
+   "signed_low": 0.1802116807291665,
+   "signed_high": 1.6602486140624995,
+   "mean_abs_gap": 1.9700941458333336,
+   "abs_low": 1.6137465273437501,
+   "abs_high": 2.353955586979167,
+   "max_abs_gap": 4.852409500000004,
+   "share_material": 0.4375,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.04906117916107178,
+   "p_holm": 0.6377953290939331
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.21688073958333362,
+   "signed_low": -0.5321127627604167,
+   "signed_high": 0.9596970955729176,
+   "mean_abs_gap": 1.5801526354166677,
+   "abs_low": 1.194880984375001,
+   "abs_high": 2.010333940104168,
+   "max_abs_gap": 6.282739000000003,
+   "share_material": 0.2916666666666667,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.5838061571121216,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 4.323243166666668,
+   "abs_low": 3.803801955208335,
+   "abs_high": 4.872156187500002,
+   "max_abs_gap": 9.187378000000002,
+   "share_material": 0.9583333333333334,
+   "flip_rate": 0.14583333333333334,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.38067395833333273,
+   "signed_low": -0.22928081875000078,
+   "signed_high": 1.172280758854165,
+   "mean_abs_gap": 1.1835553749999999,
+   "abs_low": 0.7411339239583339,
+   "abs_high": 1.8315518119791672,
+   "max_abs_gap": 8.146856999999997,
+   "share_material": 0.14583333333333334,
+   "flip_rate": 0.041666666666666664,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.5087660551071167,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.12578718750000037,
+   "signed_low": -0.060300580208332996,
+   "signed_high": 0.3056538708333334,
+   "mean_abs_gap": 0.40781422916666615,
+   "abs_low": 0.3034471234374994,
+   "abs_high": 0.519663184895832,
+   "max_abs_gap": 1.3821500000000029,
+   "share_material": 0,
+   "flip_rate": 0.020833333333333332,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.14335036277770996,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.7553453333333339,
+   "signed_low": -1.6966303046875013,
+   "signed_high": 0.20777844895833297,
+   "mean_abs_gap": 2.0178898749999994,
+   "abs_low": 1.4423318937499994,
+   "abs_high": 2.6457168182291664,
+   "max_abs_gap": 7.227792999999998,
+   "share_material": 0.3333333333333333,
+   "flip_rate": 0.08333333333333333,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.08937323093414307,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.15666233333333293,
+   "signed_low": -0.559500213020833,
+   "signed_high": 0.8866562880208338,
+   "mean_abs_gap": 1.5183173333333333,
+   "abs_low": 1.1161173635416668,
+   "abs_high": 1.963768289583334,
+   "max_abs_gap": 5.628728000000002,
+   "share_material": 0.2916666666666667,
+   "flip_rate": 0.0625,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.8553357124328613,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.025442541666665857,
+   "signed_low": -0.15762212968750036,
+   "signed_high": 0.20632001770833278,
+   "mean_abs_gap": 0.37491116666666563,
+   "abs_low": 0.27169016510416466,
+   "abs_high": 0.4939833505208331,
+   "max_abs_gap": 1.384717000000002,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.8115357160568237,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.6472559374999993,
+   "signed_low": -1.7116883369791664,
+   "signed_high": 0.30220579635416656,
+   "mean_abs_gap": 1.942883645833333,
+   "abs_low": 1.3341463843749999,
+   "abs_high": 2.723474821875,
+   "max_abs_gap": 9.346824000000005,
+   "share_material": 0.3541666666666667,
+   "flip_rate": 0.020833333333333332,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.3305051326751709,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.03408186805555591,
+   "signed_low": -0.08086523628472236,
+   "signed_high": 0.014349205208333077,
+   "mean_abs_gap": 0.1279195902777777,
+   "abs_low": 0.11185777795138907,
+   "abs_high": 0.14441939826388878,
+   "max_abs_gap": 0.28211433333333485,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.19737839698791504,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.04877434375000019,
+   "signed_low": -0.0488964882812493,
+   "signed_high": 0.1408180085937501,
+   "mean_abs_gap": 0.22451630208333317,
+   "abs_low": 0.18003845833333335,
+   "abs_high": 0.2699116520833333,
+   "max_abs_gap": 0.5512944999999974,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.23011556161284275,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.06341077083333357,
+   "signed_low": 0.00205729505208369,
+   "signed_high": 0.12562065520833318,
+   "mean_abs_gap": 0.15504664583333327,
+   "abs_low": 0.12252490468750026,
+   "abs_high": 0.1915262192708335,
+   "max_abs_gap": 0.43424450000000014,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.17021959595917513,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.014636427083333384,
+   "signed_low": -0.07206981406250003,
+   "signed_high": 0.10886723619791668,
+   "mean_abs_gap": 0.17452365624999974,
+   "abs_low": 0.11659321614583336,
+   "abs_high": 0.2359074570312493,
+   "max_abs_gap": 0.6249620000000036,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": 0.7750634573284221,
+   "p_holm": 1.0
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 0.4642024999999996,
+   "abs_low": 0.42254613906249927,
+   "abs_high": 0.5061786489583321,
+   "max_abs_gap": 0.7492210000000057,
+   "share_material": 0,
+   "flip_rate": 0.020833333333333332,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.49309410416666694,
+   "signed_low": 0.23270767812500034,
+   "signed_high": 0.7509056687499999,
+   "mean_abs_gap": 0.7337743125000001,
+   "abs_low": 0.5779607427083338,
+   "abs_high": 0.9023916604166674,
+   "max_abs_gap": 1.9357809999999986,
+   "share_material": 0,
+   "flip_rate": 0.0625,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.001092672348022461,
+   "p_holm": 0.019668102264404297
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.1771259791666664,
+   "signed_low": -0.2904048640624997,
+   "signed_high": -0.06430985468750079,
+   "mean_abs_gap": 0.2729864374999995,
+   "abs_low": 0.1974016802083332,
+   "abs_high": 0.3537838338541653,
+   "max_abs_gap": 0.7126570000000001,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.004810690879821777,
+   "p_holm": 0.07697105407714844
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.4695012083333332,
+   "signed_low": -0.6503934921874998,
+   "signed_high": -0.2956554541666668,
+   "mean_abs_gap": 0.5274213750000002,
+   "abs_low": 0.3866334828125001,
+   "abs_high": 0.6830931062500003,
+   "max_abs_gap": 1.9874229999999997,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 2.467632293701172e-05,
+   "p_holm": 0.0004935264587402344
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.4930940000000003,
+   "signed_low": 0.23270757500000078,
+   "signed_high": 0.7509056098958337,
+   "mean_abs_gap": 0.7337742499999999,
+   "abs_low": 0.5779605807291675,
+   "abs_high": 0.9023916374999997,
+   "max_abs_gap": 1.9357809999999986,
+   "share_material": 0,
+   "flip_rate": 0.041666666666666664,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.001092672348022461,
+   "p_holm": 0.019668102264404297
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.1771259374999994,
+   "signed_low": -0.2904046020833326,
+   "signed_high": -0.06430966979166625,
+   "mean_abs_gap": 0.27298647916666624,
+   "abs_low": 0.1974018208333324,
+   "abs_high": 0.3537839317708323,
+   "max_abs_gap": 0.7126579999999976,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 0.004810690879821777,
+   "p_holm": 0.07697105407714844
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": -0.4695011874999997,
+   "signed_low": -0.650393430729167,
+   "signed_high": -0.29565551718750005,
+   "mean_abs_gap": 0.5274213541666667,
+   "abs_low": 0.3866335260416668,
+   "abs_high": 0.6830929234374996,
+   "max_abs_gap": 1.9874229999999997,
+   "share_material": 0,
+   "flip_rate": 0.020833333333333332,
+   "n_flip_rows": 48,
+   "p_wilcoxon": 2.467632293701172e-05,
+   "p_holm": 0.0004935264587402344
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "female_minus_male",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "malay_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_chinese",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "indian_minus_malay",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": null,
+   "n_flip_rows": 0,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "name_cue",
+   "comparison": "name_spread",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": null,
+   "signed_low": null,
+   "signed_high": null,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "career_gap",
+   "comparison": "with_break_minus_without",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "institution",
+   "comparison": "higher_minus_comparison",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "attribute": "formatting",
+   "comparison": "alternative_minus_standard",
+   "n_base_resumes": 24,
+   "n_resume_job_rows": 48,
+   "mean_signed_gap": 0.0,
+   "signed_low": 0.0,
+   "signed_high": 0.0,
+   "mean_abs_gap": 0.0,
+   "abs_low": 0.0,
+   "abs_high": 0.0,
+   "max_abs_gap": 0.0,
+   "share_material": 0,
+   "flip_rate": 0,
+   "n_flip_rows": 48,
+   "p_wilcoxon": null,
+   "p_holm": null
+  }
+ ],
+ "stability": [
+  {
+   "method": "embedding",
+   "mitigation": "none",
+   "format_topk_jaccard": 0.8,
+   "format_rank_spearman": 0.9047619047619048,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  },
+  {
+   "method": "embedding",
+   "mitigation": "anonymised",
+   "format_topk_jaccard": 0.9333333333333333,
+   "format_rank_spearman": 0.9563492063492064,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  },
+  {
+   "method": "embedding",
+   "mitigation": "structured_evidence",
+   "format_topk_jaccard": 1.0,
+   "format_rank_spearman": 1.0,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "format_topk_jaccard": 1.0,
+   "format_rank_spearman": 0.996031746031746,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  },
+  {
+   "method": "embedding_sectioned",
+   "mitigation": "anonymised",
+   "format_topk_jaccard": 1.0,
+   "format_rank_spearman": 1.0,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  },
+  {
+   "method": "keyword",
+   "mitigation": "none",
+   "format_topk_jaccard": 1.0,
+   "format_rank_spearman": 1.0,
+   "repeat_runs": 1,
+   "mean_within_sample_sd": 0.0,
+   "deterministic": true
+  }
+ ],
+ "failure_cases": [
+  {
+   "kind": "tier_inversion",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "margin": 26.033088,
+   "higher_tier": {
+    "sample_id": "SE-R07-SE-01-REF",
+    "tier": "good",
+    "score": 32.939912
+   },
+   "lower_tier": {
+    "sample_id": "SE-R04-SE-01-REF",
+    "tier": "borderline",
+    "score": 58.973
+   },
+   "case_id": "F01",
+   "explanation": "With meaning-matching, SE-R04 (a borderline candidate for job SE-01) scored 26.0 points higher than SE-R07 (a good candidate for job SE-01), so the weaker candidate was ranked above the stronger one.",
+   "evidence": [
+    {
+     "competency": "Backend programming language",
+     "higher_tier_level": 3,
+     "lower_tier_level": 1,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "API design and development",
+     "higher_tier_level": 2,
+     "lower_tier_level": 3,
+     "lower_tier_lines": [
+      "Build small websites and booking tools for local businesses using Django and Bootstrap.",
+      "Add simple REST endpoints for mobile-friendly booking forms.",
+      "Hawker queue tracker: Django and PostgreSQL web app that shows queue times from user reports, with pytest tests."
+     ]
+    },
+    {
+     "competency": "Relational databases",
+     "higher_tier_level": 2,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Hawker queue tracker: Django and PostgreSQL web app that shows queue times from user reports, with pytest tests."
+     ]
+    },
+    {
+     "competency": "Automated testing",
+     "higher_tier_level": 2,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Hawker queue tracker: Django and PostgreSQL web app that shows queue times from user reports, with pytest tests."
+     ]
+    },
+    {
+     "competency": "Containers, cloud and CI/CD",
+     "higher_tier_level": 2,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Production support and debugging",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Code review and collaboration",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    }
+   ]
+  },
+  {
+   "kind": "largest_name_cue_gap",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "gap": 9.187378000000002,
+   "a": {
+    "sample_id": "MA-R06-MA-01-NAME-malay_male",
+    "score": 47.395633
+   },
+   "b": {
+    "sample_id": "MA-R06-MA-01-NAME-indian_female",
+    "score": 56.583011
+   },
+   "case_id": "F02",
+   "explanation": "MA-R06 (a borderline candidate for job MA-01): changing the name from \"Muhammad Hafiz Rahman\" to \"Priya Nair\" moved the meaning-matching score by +9.2 points.",
+   "changed": {
+    "field": "name",
+    "a": "Muhammad Hafiz Rahman",
+    "b": "Priya Nair"
+   }
+  },
+  {
+   "kind": "largest_career_gap_gap",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "gap": 8.146856999999997,
+   "a": {
+    "sample_id": "SE-R07-SE-01-REF",
+    "score": 32.939912
+   },
+   "b": {
+    "sample_id": "SE-R07-SE-01-GAP",
+    "score": 41.086769
+   },
+   "case_id": "F03",
+   "explanation": "SE-R07 (a good candidate for job SE-01): changing the career break from \"none\" to \"Career break 2022-02 to 2023-01\" moved the meaning-matching score by +8.1 points. Part of this jump is not about the change itself: the model reads about 250 words at a time, and the change made the text read in 2 pieces instead of 1.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2022-02 to 2023-01"
+   }
+  },
+  {
+   "kind": "largest_institution_gap",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-02",
+   "gap": 1.3821500000000029,
+   "a": {
+    "sample_id": "DA-R02-DA-02-INST-COMP",
+    "score": 52.485637
+   },
+   "b": {
+    "sample_id": "DA-R02-DA-02-INST-HIGH",
+    "score": 53.867787
+   },
+   "case_id": "F04",
+   "explanation": "DA-R02 (a borderline candidate for job DA-02): changing the university from \"Singapore University of Social Sciences\" to \"Nanyang Technological University\" moved the meaning-matching score by +1.4 points.",
+   "changed": {
+    "field": "institution",
+    "a": "Singapore University of Social Sciences",
+    "b": "Nanyang Technological University"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "DA-R02-DA-01-NAME-chinese_female",
+     "score": 64.576096,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "DA-R02-DA-01-REF",
+     "score": 65.239144,
+     "shortlisted": false
+    },
+    "malay_female": {
+     "sample_id": "DA-R02-DA-01-NAME-malay_female",
+     "score": 67.098762,
+     "shortlisted": true
+    },
+    "malay_male": {
+     "sample_id": "DA-R02-DA-01-NAME-malay_male",
+     "score": 67.575599,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "DA-R02-DA-01-NAME-indian_female",
+     "score": 68.014543,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "DA-R02-DA-01-NAME-indian_male",
+     "score": 69.097511,
+     "shortlisted": true
+    }
+   },
+   "case_id": "F05",
+   "explanation": "With meaning-matching, DA-R02 (a good candidate for job DA-01) made the top 4 under 4 of the 6 names (Malay female name, Malay male name, Indian female name, Indian male name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "DA-R03-DA-01-NAME-chinese_female",
+     "score": 67.938159,
+     "shortlisted": true
+    },
+    "chinese_male": {
+     "sample_id": "DA-R03-DA-01-NAME-chinese_male",
+     "score": 65.771186,
+     "shortlisted": true
+    },
+    "malay_female": {
+     "sample_id": "DA-R03-DA-01-REF",
+     "score": 67.22347,
+     "shortlisted": true
+    },
+    "malay_male": {
+     "sample_id": "DA-R03-DA-01-NAME-malay_male",
+     "score": 69.446193,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "DA-R03-DA-01-NAME-indian_female",
+     "score": 66.596468,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "DA-R03-DA-01-NAME-indian_male",
+     "score": 62.185502,
+     "shortlisted": false
+    }
+   },
+   "case_id": "F06",
+   "explanation": "With meaning-matching, DA-R03 (a borderline candidate for job DA-01) made the top 4 under 5 of the 6 names (Chinese female name, Chinese male name, Malay female name, Malay male name, Indian female name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-02",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "DA-R03-DA-02-NAME-chinese_female",
+     "score": 54.755077,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "DA-R03-DA-02-NAME-chinese_male",
+     "score": 51.059001,
+     "shortlisted": false
+    },
+    "malay_female": {
+     "sample_id": "DA-R03-DA-02-REF",
+     "score": 54.29014,
+     "shortlisted": false
+    },
+    "malay_male": {
+     "sample_id": "DA-R03-DA-02-NAME-malay_male",
+     "score": 56.680709,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "DA-R03-DA-02-NAME-indian_female",
+     "score": 55.429111,
+     "shortlisted": false
+    },
+    "indian_male": {
+     "sample_id": "DA-R03-DA-02-NAME-indian_male",
+     "score": 53.478707,
+     "shortlisted": false
+    }
+   },
+   "case_id": "F07",
+   "explanation": "With meaning-matching, DA-R03 (a weak candidate for job DA-02) made the top 4 under 1 of the 6 names (Malay male name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "formatting",
+   "a": {
+    "sample_id": "DA-R05-DA-01-REF",
+    "score": 68.734191,
+    "shortlisted": true
+   },
+   "b": {
+    "sample_id": "DA-R05-DA-01-FMT-ALT",
+    "score": 64.052784,
+    "shortlisted": false
+   },
+   "case_id": "F08",
+   "explanation": "DA-R05 (a good candidate for job DA-01): changing the section order from \"summary, experience, education, skills\" to \"summary, skills, experience, education\" moved the meaning-matching score by -4.7 points. Before the change the candidate made the top 4; after it, they missed the top 4.",
+   "changed": {
+    "field": "formatting",
+    "a": "summary, experience, education, skills",
+    "b": "summary, skills, experience, education"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "DA-R05-DA-01-NAME-chinese_female",
+     "score": 65.010196,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "DA-R05-DA-01-NAME-chinese_male",
+     "score": 66.312086,
+     "shortlisted": true
+    },
+    "malay_female": {
+     "sample_id": "DA-R05-DA-01-NAME-malay_female",
+     "score": 67.662846,
+     "shortlisted": true
+    },
+    "malay_male": {
+     "sample_id": "DA-R05-DA-01-NAME-malay_male",
+     "score": 67.113511,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "DA-R05-DA-01-REF",
+     "score": 68.734191,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "DA-R05-DA-01-NAME-indian_male",
+     "score": 68.61832,
+     "shortlisted": true
+    }
+   },
+   "case_id": "F09",
+   "explanation": "With meaning-matching, DA-R05 (a good candidate for job DA-01) made the top 4 under 5 of the 6 names (Chinese male name, Malay female name, Malay male name, Indian female name, Indian male name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "career_gap",
+   "a": {
+    "sample_id": "DA-R06-DA-01-REF",
+    "score": 66.677014,
+    "shortlisted": true
+   },
+   "b": {
+    "sample_id": "DA-R06-DA-01-GAP",
+    "score": 64.584088,
+    "shortlisted": false
+   },
+   "case_id": "F10",
+   "explanation": "DA-R06 (a strong candidate for job DA-01): changing the career break from \"none\" to \"Career break 2021-02 to 2022-01\" moved the meaning-matching score by -2.1 points. Before the change the candidate made the top 4; after it, they missed the top 4.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2021-02 to 2022-01"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "formatting",
+   "a": {
+    "sample_id": "DA-R06-DA-01-REF",
+    "score": 66.677014,
+    "shortlisted": true
+   },
+   "b": {
+    "sample_id": "DA-R06-DA-01-FMT-ALT",
+    "score": 64.733269,
+    "shortlisted": false
+   },
+   "case_id": "F11",
+   "explanation": "DA-R06 (a strong candidate for job DA-01): changing the section order from \"summary, experience, education, skills\" to \"summary, skills, experience, education\" moved the meaning-matching score by -1.9 points. Before the change the candidate made the top 4; after it, they missed the top 4.",
+   "changed": {
+    "field": "formatting",
+    "a": "summary, experience, education, skills",
+    "b": "summary, skills, experience, education"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "DA-R07-DA-01-REF",
+     "score": 63.962495,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "DA-R07-DA-01-NAME-chinese_male",
+     "score": 66.953992,
+     "shortlisted": true
+    },
+    "malay_female": {
+     "sample_id": "DA-R07-DA-01-NAME-malay_female",
+     "score": 68.57928,
+     "shortlisted": true
+    },
+    "malay_male": {
+     "sample_id": "DA-R07-DA-01-NAME-malay_male",
+     "score": 68.594162,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "DA-R07-DA-01-NAME-indian_female",
+     "score": 69.576363,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "DA-R07-DA-01-NAME-indian_male",
+     "score": 70.170608,
+     "shortlisted": true
+    }
+   },
+   "case_id": "F12",
+   "explanation": "With meaning-matching, DA-R07 (a borderline candidate for job DA-01) made the top 4 under 5 of the 6 names (Chinese male name, Malay female name, Malay male name, Indian female name, Indian male name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "DA-02",
+   "attribute": "formatting",
+   "a": {
+    "sample_id": "DA-R08-DA-02-REF",
+    "score": 56.436297,
+    "shortlisted": true
+   },
+   "b": {
+    "sample_id": "DA-R08-DA-02-FMT-ALT",
+    "score": 50.687562,
+    "shortlisted": false
+   },
+   "case_id": "F13",
+   "explanation": "DA-R08 (a borderline candidate for job DA-02): changing the section order from \"summary, experience, education, skills\" to \"summary, skills, experience, education\" moved the meaning-matching score by -5.7 points. Before the change the candidate made the top 4; after it, they missed the top 4.",
+   "changed": {
+    "field": "formatting",
+    "a": "summary, experience, education, skills",
+    "b": "summary, skills, experience, education"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "MA-02",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "MA-R08-MA-02-NAME-chinese_female",
+     "score": 44.406042,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "MA-R08-MA-02-NAME-chinese_male",
+     "score": 44.69672,
+     "shortlisted": false
+    },
+    "malay_female": {
+     "sample_id": "MA-R08-MA-02-NAME-malay_female",
+     "score": 47.622692,
+     "shortlisted": false
+    },
+    "malay_male": {
+     "sample_id": "MA-R08-MA-02-REF",
+     "score": 47.959733,
+     "shortlisted": false
+    },
+    "indian_female": {
+     "sample_id": "MA-R08-MA-02-NAME-indian_female",
+     "score": 49.173994,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "MA-R08-MA-02-NAME-indian_male",
+     "score": 47.916888,
+     "shortlisted": false
+    }
+   },
+   "case_id": "F14",
+   "explanation": "With meaning-matching, MA-R08 (a weak candidate for job MA-02) made the top 4 under 1 of the 6 names (Indian female name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "career_gap",
+   "a": {
+    "sample_id": "SE-R03-SE-01-REF",
+    "score": 47.010304,
+    "shortlisted": false
+   },
+   "b": {
+    "sample_id": "SE-R03-SE-01-GAP",
+    "score": 47.808438,
+    "shortlisted": true
+   },
+   "case_id": "F15",
+   "explanation": "SE-R03 (a good candidate for job SE-01): changing the career break from \"none\" to \"Career break 2022-09 to 2023-08\" moved the meaning-matching score by +0.8 points. Before the change the candidate missed the top 4; after it, they made the top 4.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2022-09 to 2023-08"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "institution",
+   "a": {
+    "sample_id": "SE-R06-SE-01-INST-COMP",
+    "score": 46.967413,
+    "shortlisted": false
+   },
+   "b": {
+    "sample_id": "SE-R06-SE-01-INST-HIGH",
+    "score": 47.654178,
+    "shortlisted": true
+   },
+   "case_id": "F16",
+   "explanation": "SE-R06 (a weak candidate for job SE-01): changing the university from \"Singapore Institute of Technology\" to \"Nanyang Technological University\" moved the meaning-matching score by +0.7 points. Before the change the candidate missed the top 4; after it, they made the top 4.",
+   "changed": {
+    "field": "institution",
+    "a": "Singapore Institute of Technology",
+    "b": "Nanyang Technological University"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "formatting",
+   "a": {
+    "sample_id": "SE-R06-SE-01-REF",
+    "score": 47.088675,
+    "shortlisted": true
+   },
+   "b": {
+    "sample_id": "SE-R06-SE-01-FMT-ALT",
+    "score": 43.94072,
+    "shortlisted": false
+   },
+   "case_id": "F17",
+   "explanation": "SE-R06 (a weak candidate for job SE-01): changing the section order from \"summary, experience, education, skills\" to \"summary, skills, experience, education\" moved the meaning-matching score by -3.1 points. Before the change the candidate made the top 4; after it, they missed the top 4.",
+   "changed": {
+    "field": "formatting",
+    "a": "summary, experience, education, skills",
+    "b": "summary, skills, experience, education"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "SE-R06-SE-01-NAME-chinese_female",
+     "score": 47.508262,
+     "shortlisted": true
+    },
+    "chinese_male": {
+     "sample_id": "SE-R06-SE-01-NAME-chinese_male",
+     "score": 45.240955,
+     "shortlisted": false
+    },
+    "malay_female": {
+     "sample_id": "SE-R06-SE-01-NAME-malay_female",
+     "score": 46.236386,
+     "shortlisted": false
+    },
+    "malay_male": {
+     "sample_id": "SE-R06-SE-01-REF",
+     "score": 47.088675,
+     "shortlisted": true
+    },
+    "indian_female": {
+     "sample_id": "SE-R06-SE-01-NAME-indian_female",
+     "score": 47.024226,
+     "shortlisted": true
+    },
+    "indian_male": {
+     "sample_id": "SE-R06-SE-01-NAME-indian_male",
+     "score": 46.384826,
+     "shortlisted": false
+    }
+   },
+   "case_id": "F18",
+   "explanation": "With meaning-matching, SE-R06 (a weak candidate for job SE-01) made the top 4 under 3 of the 6 names (Chinese female name, Malay male name, Indian female name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "tier_inversion",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "margin": 17.673730000000003,
+   "higher_tier": {
+    "sample_id": "MA-R07-MA-01-REF",
+    "tier": "borderline",
+    "score": 29.03733
+   },
+   "lower_tier": {
+    "sample_id": "MA-R04-MA-01-REF",
+    "tier": "weak",
+    "score": 46.71106
+   },
+   "case_id": "F19",
+   "explanation": "With section-by-section matching, MA-R04 (a weak candidate for job MA-01) scored 17.7 points higher than MA-R07 (a borderline candidate for job MA-01), so the weaker candidate was ranked above the stronger one.",
+   "evidence": [
+    {
+     "competency": "Paid media platforms",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Funnel and attribution analysis",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Campaign testing",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "SQL and spreadsheets",
+     "higher_tier_level": 2,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Prepared survey data tables in SPSS and Excel."
+     ]
+    },
+    {
+     "competency": "Budget and efficiency optimisation",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Reporting dashboards",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Stakeholder communication",
+     "higher_tier_level": 0,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Present insight reports with recommendations to marketing and customer experience teams; two recommendations changed the retention offer structure in 2024."
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "largest_name_cue_gap",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "gap": 0.7492210000000057,
+   "a": {
+    "sample_id": "MA-R04-MA-01-NAME-malay_male",
+    "score": 46.045359
+   },
+   "b": {
+    "sample_id": "MA-R04-MA-01-NAME-indian_female",
+    "score": 46.79458
+   },
+   "case_id": "F20",
+   "explanation": "MA-R04 (a weak candidate for job MA-01): changing the name from \"Muhammad Hafiz Rahman\" to \"Priya Nair\" moved the section-by-section matching score by +0.7 points.",
+   "changed": {
+    "field": "name",
+    "a": "Muhammad Hafiz Rahman",
+    "b": "Priya Nair"
+   }
+  },
+  {
+   "kind": "largest_career_gap_gap",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "gap": 1.9357809999999986,
+   "a": {
+    "sample_id": "MA-R08-MA-01-REF",
+    "score": 33.610886
+   },
+   "b": {
+    "sample_id": "MA-R08-MA-01-GAP",
+    "score": 35.546667
+   },
+   "case_id": "F21",
+   "explanation": "MA-R08 (a weak candidate for job MA-01): changing the career break from \"none\" to \"Career break 2021-03 to 2022-02\" moved the section-by-section matching score by +1.9 points.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2021-03 to 2022-02"
+   }
+  },
+  {
+   "kind": "largest_institution_gap",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "gap": -0.7126570000000001,
+   "a": {
+    "sample_id": "MA-R06-MA-01-INST-COMP",
+    "score": 37.111619
+   },
+   "b": {
+    "sample_id": "MA-R06-MA-01-INST-HIGH",
+    "score": 36.398962
+   },
+   "case_id": "F22",
+   "explanation": "MA-R06 (a borderline candidate for job MA-01): changing the university from \"Singapore Institute of Technology\" to \"Nanyang Technological University\" moved the section-by-section matching score by -0.7 points.",
+   "changed": {
+    "field": "institution",
+    "a": "Singapore Institute of Technology",
+    "b": "Nanyang Technological University"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "DA-01",
+   "attribute": "career_gap",
+   "a": {
+    "sample_id": "DA-R03-DA-01-REF",
+    "score": 52.073246,
+    "shortlisted": false
+   },
+   "b": {
+    "sample_id": "DA-R03-DA-01-GAP",
+    "score": 53.367358,
+    "shortlisted": true
+   },
+   "case_id": "F23",
+   "explanation": "DA-R03 (a borderline candidate for job DA-01): changing the career break from \"none\" to \"Career break 2023-06 to 2024-05\" moved the section-by-section matching score by +1.3 points. Before the change the candidate missed the top 4; after it, they made the top 4.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2023-06 to 2024-05"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "MA-01",
+   "attribute": "career_gap",
+   "a": {
+    "sample_id": "MA-R05-MA-01-REF",
+    "score": 45.858944,
+    "shortlisted": false
+   },
+   "b": {
+    "sample_id": "MA-R05-MA-01-GAP",
+    "score": 47.005242,
+    "shortlisted": true
+   },
+   "case_id": "F24",
+   "explanation": "MA-R05 (a good candidate for job MA-01): changing the career break from \"none\" to \"Career break 2023-01 to 2023-12\" moved the section-by-section matching score by +1.1 points. Before the change the candidate missed the top 4; after it, they made the top 4.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2023-01 to 2023-12"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "career_gap",
+   "a": {
+    "sample_id": "SE-R08-SE-01-REF",
+    "score": 37.760342,
+    "shortlisted": false
+   },
+   "b": {
+    "sample_id": "SE-R08-SE-01-GAP",
+    "score": 38.533511,
+    "shortlisted": true
+   },
+   "case_id": "F25",
+   "explanation": "SE-R08 (a weak candidate for job SE-01): changing the career break from \"none\" to \"Career break 2022-03 to 2023-02\" moved the section-by-section matching score by +0.8 points. Before the change the candidate missed the top 4; after it, they made the top 4.",
+   "changed": {
+    "field": "career break",
+    "a": "none",
+    "b": "Career break 2022-03 to 2023-02"
+   }
+  },
+  {
+   "kind": "shortlist_flip",
+   "method": "embedding_sectioned",
+   "mitigation": "none",
+   "job_id": "SE-01",
+   "attribute": "name_cue",
+   "by_group": {
+    "chinese_female": {
+     "sample_id": "SE-R08-SE-01-NAME-chinese_female",
+     "score": 37.88981,
+     "shortlisted": false
+    },
+    "chinese_male": {
+     "sample_id": "SE-R08-SE-01-NAME-chinese_male",
+     "score": 37.655329,
+     "shortlisted": false
+    },
+    "malay_female": {
+     "sample_id": "SE-R08-SE-01-NAME-malay_female",
+     "score": 38.267078,
+     "shortlisted": true
+    },
+    "malay_male": {
+     "sample_id": "SE-R08-SE-01-NAME-malay_male",
+     "score": 38.164437,
+     "shortlisted": false
+    },
+    "indian_female": {
+     "sample_id": "SE-R08-SE-01-NAME-indian_female",
+     "score": 38.086316,
+     "shortlisted": false
+    },
+    "indian_male": {
+     "sample_id": "SE-R08-SE-01-REF",
+     "score": 37.760342,
+     "shortlisted": false
+    }
+   },
+   "case_id": "F26",
+   "explanation": "With section-by-section matching, SE-R08 (a weak candidate for job SE-01) made the top 4 under 1 of the 6 names (Malay female name) and missed it under the others. Only the name was different.",
+   "changed": {
+    "field": "name"
+   }
+  },
+  {
+   "kind": "tier_inversion",
+   "method": "keyword",
+   "mitigation": "none",
+   "job_id": "MA-02",
+   "margin": 10.0,
+   "higher_tier": {
+    "sample_id": "MA-R01-MA-02-REF",
+    "tier": "borderline",
+    "score": 13.333333
+   },
+   "lower_tier": {
+    "sample_id": "MA-R08-MA-02-REF",
+    "tier": "weak",
+    "score": 23.333333
+   },
+   "case_id": "F27",
+   "explanation": "With keyword counting, MA-R08 (a weak candidate for job MA-02) scored 10.0 points higher than MA-R01 (a borderline candidate for job MA-02), so the weaker candidate was ranked above the stronger one. It gave the weaker candidate credit for CRM and campaign platforms because of the line \"Visit about 15 customers a week and record orders in the company CRM\".",
+   "evidence": [
+    {
+     "competency": "Customer segmentation",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Retention and lifetime value",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "CRM and campaign platforms",
+     "higher_tier_level": 0,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Visit about 15 customers a week and record orders in the company CRM."
+     ]
+    },
+    {
+     "competency": "SQL, spreadsheets or Python",
+     "higher_tier_level": 2,
+     "lower_tier_level": 2,
+     "lower_tier_lines": [
+      "Prepare quotations in Excel."
+     ]
+    },
+    {
+     "competency": "Survey and customer research",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    },
+    {
+     "competency": "Insight storytelling",
+     "higher_tier_level": 0,
+     "lower_tier_level": 0,
+     "lower_tier_lines": []
+    }
+   ]
+  }
+ ]
+}

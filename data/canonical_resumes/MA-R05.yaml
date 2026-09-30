@@ -1,0 +1,46 @@
+resume_id: MA-R05
+family: marketing_analyst
+intended_tier:
+  MA-01: good
+  MA-02: weak
+generation_version: '1.0'
+status: draft
+design_notes: 'Good for MA-01: runs Meta and Google campaigns with GA4 and UTM tracking, CPA reporting and simple creative
+  tests, at small budgets. Weak for MA-02: no segmentation, retention or CRM work.'
+summary: Digital marketing executive with four years of experience running social media and paid ads for food and events businesses.
+experience:
+- employer: Bencoolen Bakes
+  title: Digital Marketing Executive
+  location: Singapore
+  start: 2024-01
+  end: null
+  bullets:
+  - Run Meta Ads and Google Ads campaigns for a bakery chain with a monthly budget of about SGD 20,000.
+  - Track results in GA4 using UTM links and report cost per acquisition each week.
+  - Test two versions of ad creative each month and keep the one with the lower CPA.
+  - Update a weekly Google Sheets report for the marketing manager.
+- employer: Dhoby Ghaut Events
+  title: Social Media Executive
+  location: Singapore
+  start: 2022-07
+  end: 2023-12
+  bullets:
+  - Planned Instagram and TikTok posts and tracked engagement.
+  - Boosted event posts on Facebook with small budgets.
+education:
+- institution: National University of Singapore
+  qualification: Bachelor of Arts
+  subject: Communications and New Media
+  start: 2018-08
+  end: 2022-06
+  grade: GPA 3.6 / 5.0
+skills:
+  Platforms:
+  - Meta Ads
+  - Google Ads
+  - GA4
+  - Instagram
+  - TikTok
+  Tools:
+  - Google Sheets
+  - Canva
